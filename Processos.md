@@ -33,3 +33,4 @@ Este ha sido el reusltado de la salida del comando **ps l**
 <img width="807" height="83" alt="image" src="https://github.com/user-attachments/assets/afafba22-cac1-4595-afd0-fb32349e33a9" />
 
 
+

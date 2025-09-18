@@ -43,6 +43,9 @@ Es el resultado de la salida renice
 
 Ara farem servir la utilitat top per donar al procés la prioritat màxima. Arranquem la utilitat interactiva:
 
+Este es el resultado de la salida Top
+
+<img width="1160" height="438" alt="image" src="https://github.com/user-attachments/assets/d42c69ef-b4f7-4733-a442-644de20ace7c" />
 
 
 

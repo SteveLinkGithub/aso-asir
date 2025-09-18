@@ -9,3 +9,13 @@ Baixar al mínim la prioritat nice d’aquest procés. Comprovar el resultat i v
 Fer servir la utilitat top per assignar ara la màxima prioritat al procés. Convé que proveu com es poden ordenar els processos per diferents camps.
 
 
+Una vegada engegada l’aplicació gedit obrim una consola de text per poder efectuar les diferents ordres administratives.
+
+Si fem una ordre ps genèrica només veurem els processos de la nostra sessió. Si fem servir les opcions aux podrem veure gairebé tots els processos:
+
+
+PS AUX, con este comando (estlinye    2905  0.0  0.0  29140 11984 ?        Ss   08:01   0:00 /lib/systemd/systemd --user)
+
+
+
+

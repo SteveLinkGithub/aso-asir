@@ -33,4 +33,16 @@ Este ha sido el reusltado de la salida del comando **ps l**
 <img width="807" height="83" alt="image" src="https://github.com/user-attachments/assets/afafba22-cac1-4595-afd0-fb32349e33a9" />
 
 
+Veiem que la prioritat general (PRI) és 20 i la prioritat d’usuari nice (NI) està a 0. Baixem ara al mínim la prioritat nice:
+
+**renice 30 132566 - (132566 (process ID) prioridad anterior 0, nueva prioridad 19)**
+
+Es el resultado de la salida renice 
+
+<img width="560" height="72" alt="image" src="https://github.com/user-attachments/assets/667419ed-3957-4dac-98bf-ba50f4d113ab" />
+
+Ara farem servir la utilitat top per donar al procés la prioritat màxima. Arranquem la utilitat interactiva:
+
+
+
 

@@ -1,0 +1,11 @@
+Prioritat i monitorització de processos
+L’objectiu d’aquesta activitat és entendre el funcionament del sistema de prioritats a Linux i fer ús de les ordres associades a la seva gestió. També caldrà conèixer les eines de monitorització ps i top.
+
+Per fer aquesta tasca es demanen les activitats següents:
+
+Arrancar l’editor de text gedit en l’entorn gràfic.
+Localitzar el PID del procés i visualitzar la seva prioritat general i la prioritat d’usuari nice.
+Baixar al mínim la prioritat nice d’aquest procés. Comprovar el resultat i veure com es comporta la prioritat general.
+Fer servir la utilitat top per assignar ara la màxima prioritat al procés. Convé que proveu com es poden ordenar els processos per diferents camps.
+
+

@@ -47,5 +47,5 @@ Este es el resultado de la salida Top
 
 <img width="1160" height="438" alt="image" src="https://github.com/user-attachments/assets/d42c69ef-b4f7-4733-a442-644de20ace7c" />
 
-el Top me da un error y no me deja continuar 
+el Top me da un error y no me deja continuar, ya que filtro por control **o**, selecciono la letra **I**, y no me filtra por la palabra nice.
 

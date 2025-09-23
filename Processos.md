@@ -39,6 +39,8 @@ Veiem que la prioritat general (PRI) és 20 i la prioritat d’usuari nice (NI) 
 
 Es el resultado de la salida renice 
 
+(**132566 ( process ID ) prioridad anteior 0, nueva prioridad 19**)
+
 <img width="560" height="72" alt="image" src="https://github.com/user-attachments/assets/667419ed-3957-4dac-98bf-ba50f4d113ab" />
 
 Ara farem servir la utilitat top per donar al procés la prioritat màxima. Arranquem la utilitat interactiva:

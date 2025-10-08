@@ -4,5 +4,7 @@ L’objectiu d’aquesta activitat és conèixer dues maneres de comunicar-se am
 
 Per fer aquesta tasca es demana engegar un procés (per exemple, l’ordre yes) i enviar-li senyals mitjançant la combinació de tecles Ctrl+C i Ctrl+Z. Posteriorment cal analitzar quins han estat aquests senyals veient el valor de retorn del procés.
 
+Primer arranquem el procés yes i l’aturem amb la combinació Ctrl+C:
+
 
 

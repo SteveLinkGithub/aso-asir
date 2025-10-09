@@ -5,21 +5,21 @@ El objetivo de esta actividad es conocer dos formas de comunicarse con los proce
 Para realizar esta tarea se pide poner en marcha un proceso (por ejemplo, el mandato yes ) y enviarle señales mediante la combinación de teclas Ctrl+C y Ctrl+Z . Posteriormente es necesario analizar cuáles han sido estas señales viendo el valor de retorno del proceso.
 
 
-## Primero arrancamos el proceso yes y lo detenemos con la combinación Ctrl+C : ##
+### Primero arrancamos el proceso yes y lo detenemos con la combinación Ctrl+C : ###
 
 <img width="638" height="406" alt="image" src="https://github.com/user-attachments/assets/dd8abf92-cdd7-4d5a-b3c0-416228f6527b" />
 
 (y ^c): Este sería el resultado de saturar la terminal con el proceso "Yes", y de cancelar este proceso con **Control+C.**
 
 
-## Inmediatamente comprobamos el valor que nos devuelve el proceso al recibir la señal. El valor de retorno se guarda en la variable representada por el símbolo de interrogación ( ?) ##
+### Inmediatamente comprobamos el valor que nos devuelve el proceso al recibir la señal. El valor de retorno se guarda en la variable representada por el símbolo de interrogación ( ?) ###
 
 <img width="214" height="27" alt="image" src="https://github.com/user-attachments/assets/2a409c48-ac60-4929-bdaa-81f086081d1c" />
 
 El resultado del siguiente proceso sería comprobar y devolvernos el valor después de que este reciba la señal, es por eso que la variable **(echo $? 130)**
 
 
-## Si restamos 128 a ese valor de retorno obtenemos el código de esta señal. En este caso la señal 2 corresponde a SIGINT. Hagamos lo mismo con Ctrl+Z : ##
+### Si restamos 128 a ese valor de retorno obtenemos el código de esta señal. En este caso la señal 2 corresponde a SIGINT. Hagamos lo mismo con Ctrl+Z : ###
 
 <img width="640" height="401" alt="image" src="https://github.com/user-attachments/assets/16c981f6-be16-48c9-bd7f-5c44728c3ace" />
 
@@ -33,7 +33,11 @@ En este caso se trata de la señal 20 (148-128), que corresponde a SIGTSP.
 **(echo $? 148)**
 
 
+# Comunicación de procesos con el orden kill y captura de señales
 
+El objetivo de esta actividad es practicar el envío de señales con el comando kill y ver cómo se puede capturar una señal para efectuar una acción diferente a la inicialmente programada.
+
+Para realizar esta tarea se considera el siguiente script Bash, que podemos llamar trap.sh:
 
 
 

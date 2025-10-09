@@ -39,6 +39,14 @@ El objetivo de esta actividad es practicar el envío de señales con el comando 
 
 Para realizar esta tarea se considera el siguiente script Bash, que podemos llamar trap.sh:
 
+He creado el archivo con **(sudo nano trap.sh)** y después he ehcho un ls para ver que estaba el archivo correctamente en el directorio correspondiente.
+
+<img width="646" height="410" alt="image" src="https://github.com/user-attachments/assets/4668df77-3edf-4614-a5bb-9df482c9ed07" />
+
+<img width="562" height="56" alt="image" src="https://github.com/user-attachments/assets/42b7741e-847f-4ca5-8adf-c37010d3a2ab" />
+
+
+
 
 
 

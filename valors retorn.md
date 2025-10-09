@@ -70,6 +70,11 @@ Una vez añadida la línea procederemos a comprobar si funciona correctamente es
 
 Con esta línea de código, cuando el proceso recibe una señal de teclado SIGTSTP ( Ctrl+Z ) o SIGINT ( Ctrl+C ) es capturado y presenta el siguiente mensaje:
 
+A continuación veremos que nos sale el mensaje que queremos que salga cuando hacemos SIGTSTP **(Ctrl+Z)** o SIGINT **(Ctrl+C)**
+
+<img width="202" height="50" alt="image" src="https://github.com/user-attachments/assets/1a18c29d-bcb5-4769-9856-0d2726eefccf" />
+
+Para detener este proceso ya nada podemos hacer en esta consola. Debemos abrir otra y enviar una señal al proceso mediante kill o killall:
 
 
 

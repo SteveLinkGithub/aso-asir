@@ -1,14 +1,20 @@
-# Comunicació de processos: senyals de teclat i valors de retorn
+# Comunicación de procesos: señales de teclado y valores de retorno
 
-L’objectiu d’aquesta activitat és conèixer dues maneres de comunicar-se amb els processos: els senyals de teclat Ctrl+C i Ctrl+Z i els valors de retorn.
+El objetivo de esta actividad es conocer dos formas de comunicarse con los procesos: las señales de teclado Ctrl+C y Ctrl+Z y los valores de retorno.
 
-Per fer aquesta tasca es demana engegar un procés (per exemple, l’ordre yes) i enviar-li senyals mitjançant la combinació de tecles Ctrl+C i Ctrl+Z. Posteriorment cal analitzar quins han estat aquests senyals veient el valor de retorn del procés.
+Para realizar esta tarea se pide poner en marcha un proceso (por ejemplo, el mandato yes ) y enviarle señales mediante la combinación de teclas Ctrl+C y Ctrl+Z . Posteriormente es necesario analizar cuáles han sido estas señales viendo el valor de retorno del proceso.
 
-## Primer arranquem el procés yes i l’aturem amb la combinació Ctrl+C: ##
+## Primero arrancamos el proceso yes y lo detenemos con la combinación Ctrl+C : ##
 
 <img width="638" height="406" alt="image" src="https://github.com/user-attachments/assets/dd8abf92-cdd7-4d5a-b3c0-416228f6527b" />
 
 (y ^c): Este sería el resultado de saturar la terminal con el proceso "Yes", y de cancelar este proceso con **Control+C.**
+
+## Inmediatamente comprobamos el valor que nos devuelve el proceso al recibir la señal. El valor de retorno se guarda en la variable representada por el símbolo de interrogación ( ?) ##
+
+
+
+
 
 
 

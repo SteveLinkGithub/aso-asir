@@ -7,6 +7,7 @@ Per fer aquesta tasca es demana engegar un procés (per exemple, l’ordre yes) 
 ## Primer arranquem el procés yes i l’aturem amb la combinació Ctrl+C: ##
 
 <img width="638" height="406" alt="image" src="https://github.com/user-attachments/assets/dd8abf92-cdd7-4d5a-b3c0-416228f6527b" />
+
 (y ^c): Este sería el resultado de saturar la terminal con el proceso "Yes", y de cancelar este proceso con **Control+C.**
 
 

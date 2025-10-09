@@ -76,11 +76,25 @@ A continuación veremos que nos sale el mensaje que queremos que salga cuando ha
 
 Para detener este proceso ya nada podemos hacer en esta consola. Debemos abrir otra y enviar una señal al proceso mediante kill o killall:
 
+<img width="242" height="31" alt="image" src="https://github.com/user-attachments/assets/5f4660ed-7dc5-41d9-a36b-846bcddec172" />
+
+Si tuviesemos algún proceso desde la otra terminal lo detendría
+
+<img width="642" height="412" alt="image" src="https://github.com/user-attachments/assets/af244939-6594-40cf-a780-59705699d80f" />
 
 
+<img width="644" height="405" alt="image" src="https://github.com/user-attachments/assets/c8147814-b915-4f4c-8600-0ecba9a1b4c5" />
 
+# Gestión del nivel de ejecución
 
+El objetivo de esta actividad es conocer el funcionamiento de los niveles de ejecución de Linux Debian, cómo se configuran y qué directorios y archivos están involucrados.
 
+Habitualmente en la instalación básica de Debian los niveles de ejecución 2, 3 y 4 son iguales y el nivel por defecto es el 2. Para realizar esta tarea se piden las acciones administrativas siguientes:
+
+- {Configurar un nivel de ejecución 3 para que no tenga activo el servicio Apache.}
+- { Este nivel será el nivel predeterminado al arrancar el sistema.}
+
+Por último se pide averiguar cómo se configura un nivel por defecto en un Linux que tenga un sistema de arranque basado en upstart ( como Ubuntu).
 
 
 

@@ -43,7 +43,16 @@ He creado el archivo con **(sudo nano trap.sh)** y después he ehcho un ls para 
 
 <img width="646" height="410" alt="image" src="https://github.com/user-attachments/assets/4668df77-3edf-4614-a5bb-9df482c9ed07" />
 
+El comando era **(ls)**
+
 <img width="562" height="56" alt="image" src="https://github.com/user-attachments/assets/42b7741e-847f-4ca5-8adf-c37010d3a2ab" />
+
+
+### Es demana que aquest script no pugui ser aturat ni amb Ctrl+C ni amb Ctrl+Z. Per fer això caldrà capturar aquests senyals de teclat.
+
+### D’altra banda, si aquests senyals són rebutjats… com podríem aturar aquest procés? 
+
+
 
 
 

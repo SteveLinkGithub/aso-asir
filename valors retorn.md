@@ -48,9 +48,28 @@ El comando era **(ls)**
 <img width="562" height="56" alt="image" src="https://github.com/user-attachments/assets/42b7741e-847f-4ca5-8adf-c37010d3a2ab" />
 
 
-### Es demana que aquest script no pugui ser aturat ni amb Ctrl+C ni amb Ctrl+Z. Per fer això caldrà capturar aquests senyals de teclat.
+### Se pide que este script no pueda ser detenido ni con Ctrl+C ni con Ctrl+Z . Para ello será necesario capturar estas señales de teclado.
 
-### D’altra banda, si aquests senyals són rebutjats… com podríem aturar aquest procés? 
+### Por otra parte, si estas señales son rechazadas… ¿cómo podríamos detener este proceso?
+
+
+Debe crear el script y darle permisos de ejecución. Como puede ver, es un simple contador que sólo se detiene al terminar de contar hasta 200.000. Puede comprobar cuánto tiempo tarda en hacer este bucle con el comando time y cambiar el bucle para ajustar el tiempo a sus necesidades:
+
+
+Tras comprobarlo el proceso nos ha dado el tiempo total que tarda el bucle en ejecutarse
+
+<img width="238" height="73" alt="image" src="https://github.com/user-attachments/assets/cfb5653f-0143-44bf-8f27-d7cdff4c7fa7" />
+
+
+Puede comprobar que mientras se ejecuta responde a las señales de teclado. Para capturarlos hay que añadir la siguiente línea de trap:
+
+<img width="644" height="403" alt="image" src="https://github.com/user-attachments/assets/910cfcfc-c87c-4538-b91f-0b0e8c79c37b" />
+
+Una vez añadida la línea procederemos a comprobar si funciona correctamente esta línea.
+
+
+Con esta línea de código, cuando el proceso recibe una señal de teclado SIGTSTP ( Ctrl+Z ) o SIGINT ( Ctrl+C ) es capturado y presenta el siguiente mensaje:
+
 
 
 

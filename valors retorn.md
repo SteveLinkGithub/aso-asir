@@ -91,8 +91,8 @@ El objetivo de esta actividad es conocer el funcionamiento de los niveles de eje
 
 Habitualmente en la instalación básica de Debian los niveles de ejecución 2, 3 y 4 son iguales y el nivel por defecto es el 2. Para realizar esta tarea se piden las acciones administrativas siguientes:
 
-- {Configurar un nivel de ejecución 3 para que no tenga activo el servicio Apache.}
-- { Este nivel será el nivel predeterminado al arrancar el sistema.}
+- Configurar un nivel de ejecución 3 para que no tenga activo el servicio Apache.
+- Este nivel será el nivel predeterminado al arrancar el sistema.
 
 Por último se pide averiguar cómo se configura un nivel por defecto en un Linux que tenga un sistema de arranque basado en upstart ( como Ubuntu).
 

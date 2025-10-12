@@ -118,6 +118,8 @@ Por lo que se ve nos ha dejado crear y eliminar el nivel 2 y el 3 de ejecución
 
 He intentado hacer el ejercicio, pero en la versión de Debian que uso en la máquina virtual ya no existen los niveles de ejecución clásicos ni los directorios /etc/rc3.d/. Esto solo funcionaba en versiones antiguas de Debian con SysVinit, así que por eso en sistemas ubuntu actuales ya no deja hacerlo.
 
+<img width="365" height="242" alt="image" src="https://github.com/user-attachments/assets/ca05ca86-7518-4c6f-b439-18f4c6f1f362" />
+
 Puede comprobarse fácilmente que en el nivel 2 desde el navegador se obtiene respuesta a localhost y que en cambio en el nivel 3 no:
 
 **(init 2, init 3)**

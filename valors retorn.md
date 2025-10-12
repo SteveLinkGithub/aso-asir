@@ -99,5 +99,52 @@ Por último se pide averiguar cómo se configura un nivel por defecto en un Linu
 
 ### Aunque habitualmente es así, primero nos aseguramos que el nivel 2 y el 3 de ejecución son iguales:
 
+ **(rm /etc/rc3.d/*)**
+ (cp -d /etc/rc2.d/* /etc/rc3.d)
 
+<img width="224" height="32" alt="image" src="https://github.com/user-attachments/assets/50b51669-aa28-42de-9367-529a706e0cf4" />
+
+<img width="292" height="24" alt="image" src="https://github.com/user-attachments/assets/b373a7a3-4bfc-4381-a7a9-c5d3b87fc936" />
+
+Por lo que se ve nos ha dejado crear y eliminar el nivel 2 y el 3 de ejecución
+
+(NOTA: La opción -d copia los enlaces simbólicos como tales.)
+
+### Si queremos que el servicio Apache quede deshabilitado, al entrar en el nivel 3 sólo es necesario cambiar la S inicial por una K en el nombre del enlace simbólico que apunta al script de control de Apache:
+
+ **(mv /etc/rc3.d/S18apache2 /etc/rc3.d/K18apache2)**
+
+ <img width="210" height="32" alt="image" src="https://github.com/user-attachments/assets/763c5480-70b8-47f5-abe5-bea6c92333b6" />
+
+He intentado hacer el ejercicio, pero en la versión de Debian que uso en la máquina virtual ya no existen los niveles de ejecución clásicos ni los directorios /etc/rc3.d/. Esto solo funcionaba en versiones antiguas de Debian con SysVinit, así que por eso en sistemas ubuntu actuales ya no deja hacerlo.
+
+Puede comprobarse fácilmente que en el nivel 2 desde el navegador se obtiene respuesta a localhost y que en cambio en el nivel 3 no:
+
+**(init 2, init 3)**
+
+Para que el nivel 3 sea el nivel por defecto al arrancar, es necesario editar /etc/inittab. La línea donde dice:
+
+**(The default runlevel.
+id: 2 :initdefault:)**
+
+quedará:
+
+**(The default runlevel.
+id: 3 :initdefault:)**
+
+En un sistema basado en upstart tenemos dos opciones. Dado que se garantiza la compatibilidad hacia atrás sólo habría que crear un archivo /etc/inittab que sólo tuviera la línea del initdefault. Sin embargo, esta opción se considera obsoleta. Lo correcto es editar el archivo de configuración /etc/init/rc-sysinit.conf y cambiar la variable DEFAULT_RUNLEVEL:
+
+# cat /etc/init/rc-sysinit.conf
+# rc-sysinit - System V initialisation compatibility
+# Este task runs the old System V-style system initialisation scripts,
+# and enters the default runlevel when finished.
+...
+# Default runlevel, este puede ser overriden en el kernel command-line
+# or by faking old /etc/inittab entry
+ 
+env DEFAULT_RUNLEVEL = 3
+
+
+
+ 
 

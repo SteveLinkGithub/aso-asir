@@ -134,15 +134,25 @@ id: 3 :initdefault:)**
 
 En un sistema basado en upstart tenemos dos opciones. Dado que se garantiza la compatibilidad hacia atrás sólo habría que crear un archivo /etc/inittab que sólo tuviera la línea del initdefault. Sin embargo, esta opción se considera obsoleta. Lo correcto es editar el archivo de configuración /etc/init/rc-sysinit.conf y cambiar la variable DEFAULT_RUNLEVEL:
 
-# cat /etc/init/rc-sysinit.conf
-# rc-sysinit - System V initialisation compatibility
-# Este task runs the old System V-style system initialisation scripts,
-# and enters the default runlevel when finished.
+(cat /etc/init/rc-sysinit.conf
+rc-sysinit - System V initialisation compatibility
+Este task runs the old System V-style system initialisation scripts,
+and enters the default runlevel when finished.
 ...
-# Default runlevel, este puede ser overriden en el kernel command-line
-# or by faking old /etc/inittab entry
+Default runlevel, este puede ser overriden en el kernel command-line
+or by faking old /etc/inittab entry
  
-env DEFAULT_RUNLEVEL = 3
+env DEFAULT_RUNLEVEL = 3)
+
+## Directorio /etc/proc
+
+El objetivo de esta actividad es conocer las características y archivos de información que se encuentran en el directorio virtual /proc.
+
+Para realizar esta tarea se piden las siguientes actividades:
+
+- Abrir un navegador en el entorno gráfico y averiguar el PID que le corresponde.
+- Encontrar información de este proceso en el directorio /proc correspondiente.
+
 
 
 

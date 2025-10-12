@@ -153,8 +153,39 @@ Para realizar esta tarea se piden las siguientes actividades:
 - Abrir un navegador en el entorno gráfico y averiguar el PID que le corresponde.
 - Encontrar información de este proceso en el directorio /proc correspondiente.
 
+**Con el orden**
 
+**(ps aux)**
 
+<img width="364" height="242" alt="image" src="https://github.com/user-attachments/assets/9a30e42a-6713-4430-a93f-3cfa030dec28" />
+
+Nos sale el listado de procesos.
+
+localizo rápidamente el proceso del navegador (PID 2855), en este caso Firefox, y puedo obtener más detalles con:
+
+**(ps -lp 2855)**
+
+<img width="376" height="37" alt="image" src="https://github.com/user-attachments/assets/b9a628b3-32d2-4b41-a622-ca925e26e0b1" />
+
+Con el comando que ponemos hemos obtenido más detalles sobre el proceso.
+
+**Con el número de PID puedo buscar el directorio de información de este proceso en /proc/2855:**
+
+Como dice el enunciado nos saldrá toda la información del PID del proceso.
+
+**(ls -m /proc/2855)**
+
+<img width="583" height="58" alt="image" src="https://github.com/user-attachments/assets/3257a0c8-70f6-4f51-95b1-1861c7ffcea5" />
+
+**Aquí está toda la información del proceso, por ejemplo:**
+
+Con este comando nos saldrá toda la infromación del proceso 
+
+**(cat /proc/2855/status)**
+
+<img width="233" height="338" alt="image" src="https://github.com/user-attachments/assets/0e5edcb5-4f03-4cc2-9ab0-b1a6b7c9d6dc" />
+
+<img width="599" height="264" alt="image" src="https://github.com/user-attachments/assets/6ed04eba-0612-47c3-8806-176a3a20a325" />
 
  
 

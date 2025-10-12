@@ -97,4 +97,7 @@ Habitualmente en la instalación básica de Debian los niveles de ejecución 2, 
 Por último se pide averiguar cómo se configura un nivel por defecto en un Linux que tenga un sistema de arranque basado en upstart ( como Ubuntu).
 
 
+### Aunque habitualmente es así, primero nos aseguramos que el nivel 2 y el 3 de ejecución son iguales:
+
+
 

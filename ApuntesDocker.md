@@ -116,3 +116,59 @@
 - Se repasaron conceptos de virtualización.
 - Se introdujo el concepto de contenedor y sus características.
 - Se presentó Docker como solución principal para contenedores Linux.
+
+
+
+
+# Unidad 02: Instalación de Docker
+
+En esta unidad aprendemos a instalar Docker y a configurar algunos aspectos básicos después de la instalación. Aunque Docker funciona en Windows y MacOS, siempre que sea posible se recomienda usar Linux, donde su implementación es más estable y evita problemas comunes.
+
+
+## Instalación en Linux (Ubuntu y derivados)
+
+- Se recomienda instalar **Docker Engine CE** desde el repositorio oficial de Docker para evitar versiones antiguas de los repositorios de Ubuntu.  
+- Versiones soportadas: Ubuntu Bionic 18.04, Focal 20.04, Jammy 22.04, Kinetic 22.10.  
+- Antes de instalar, conviene eliminar versiones antiguas de Docker para evitar conflictos.  
+- Se añade el repositorio oficial de Docker y se instalan los paquetes necesarios.  
+- Instalación completa de Docker Engine CE con `docker-compose-plugin` y `docker-buildx-plugin`.  
+- Comprobación de instalación con `docker version`.
+
+### Post-instalación en Linux
+
+- Permitir que usuarios normales usen Docker sin permisos de root creando un grupo `docker` y añadiendo los usuarios.  
+- Configurar Docker para que arranque automáticamente al iniciar el sistema o desactivar esta opción.  
+- Control manual de servicios con `systemctl` para iniciar, parar o reiniciar Docker y containerd.
+
+### Desinstalación en Linux
+
+- Docker se puede eliminar con `apt-get purge`.  
+- Contenedores e imágenes permanecen a menos que se eliminen con `docker system prune` o borrando `/var/lib/docker`.
+
+
+## Instalación en Windows
+
+- Se usa **Docker Desktop**.  
+- Windows 10 Pro o Windows Server: se requiere habilitar **Hyper-V**.  
+- Windows 10 Home: se necesita instalar **WSL2** y una distribución Linux (como Ubuntu).  
+- Una vez listo, se instala Docker Desktop y se verifica con `docker version`.  
+- Problemas comunes: errores tras actualizaciones o permisos. Se suelen solucionar desinstalando Docker Desktop, borrando la carpeta `.docker` y las variables de entorno relacionadas, reiniciando y reinstalando.
+
+
+## Instalación en MacOS
+
+- Se instala Docker Desktop descargando el paquete `.dmg` desde Docker Hub.  
+- Permite ejecutar contenedores Linux aunque el rendimiento puede variar frente a Linux nativo.
+
+
+## Playgrounds de Docker
+
+- Entornos online como [Play with Docker](https://labs.play-with-docker.com/) permiten practicar sin instalar nada.  
+- Útiles para probar comandos, crear contenedores y desplegar aplicaciones de forma segura.
+
+
+## Conclusión
+
+- La unidad muestra cómo instalar Docker en Linux, Windows y MacOS, y cómo realizar configuraciones básicas.  
+- La recomendación general sigue siendo usar **Linux** para minimizar problemas y garantizar un mejor rendimiento.  
+- Con Docker instalado se puede empezar a experimentar con contenedores, tanto para desarrollo como para despliegue de aplicaciones y servicios.

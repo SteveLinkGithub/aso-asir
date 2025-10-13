@@ -423,4 +423,16 @@ Docker.
 
 Aunque hay herramientas gráficas para gestionar Docker, se trabajará únicamente con la línea de comandos para comprender mejor su funcionamiento.
 
+## 3. IMÁGENES Y CONTENEDORES
+
+### 3.1 ¿Qué es una imagen y un contenedor?
+
+Características de las imágenes y los contenedores
+
+- **Imágenes**
+
+
+  
+- **Contenedores**
+
 

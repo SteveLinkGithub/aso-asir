@@ -604,4 +604,93 @@ La descripción completa de estos comandos la podéis encontrar en:
 
 ## 8. INSPECCIONANDO CONTENEDORES CON “DOCKER INSPECT”
 
+El comando “docker inspect” es un comando que nos proporciona diversos detalles de la
+configuración de un contenedor. Ofrece distintos datos, entre ellos, identificador único (versión 64
+caracteres), almacenamiento, red, imagen en que se basa, etc. Su sintaxis es:
+
+**(docker inspect IDENTIFICADOR/NOMBRE)**
+
+La descripción completa del comando “docker inspect” la podéis encontrar en
+https://docs.docker.com/engine/reference/commandline/inspect/.
+
+## 9. EJECUTANDO COMANDOS EN UN CONTENEDOR CON “DOCKER EXEC”
+
+El comando “docker exec” nos permite ejecutar un comando dentro de un contenedor que esté en
+ese momento en ejecución. La forma sintaxis habitual para utilizar este comando es la siguiente
+
+**(docker exec [OPCIONES] IDENTIFICADOR/NOMBRE COMANDO [ARGUMENTOS])**
+
+Algunos ejemplos de uso, suponiendo un contenedor en marcha, llamando “contenedor”:
+
+**(docker exec -d contenedor touch /tmp/prueba)**
+
+Ejemplo que se ejecuta en “background”, gracias al parámetro “-d”. Este ejemplo simplemente crea
+mediante el comando “touch” un fichero “prueba” en “/tmp”.
+
+**(docker exec -it contenedor bash)**
+
+Orden que ejecutará la “shell” bash en nuestra consola (gracias al parámetro “-it” se enlaza la
+entrada y salida estándar a nuestra terminal). A efectos prácticos, con esta orden accederemos a
+una “shell” bash dentro del contenedor.
+
+**(docker exec -it -e VAR1=1 contenedor bash)**
+
+Para ejecutar un comando (por ejemplo, en Docker) estableciendo una variable de entorno, se usa el parámetro `-e` seguido de la variable y su valor, como `-e VAR1=1`. Además, con `-it` se enlaza la entrada y salida para disponer de una shell interactiva. Así, al ejecutar `docker run -it -e VAR1=1 imagen bash`, dentro de esa shell estará disponible la variable de entorno `VAR1` con valor `1`, que se puede verificar con el comando `echo $VAR1`.
+
+La descripción completa del comando “docker exec” la podéis encontrar en:
+
+**(https://docs.docker.com/engine/reference/commandline/exec/.)**
+
+## 10. COPIANDO FICHEROS ENTRE ANFITRIÓN Y CONTENEDORES CON “DOCKER CP”
+
+El comando “docker cp” es un comando que nos permite copiar ficheros y directorios del anfitrión
+a un contenedor o viceversa. No se permite actualmente la copia de fichero entre contenedores.
+Algunos ejemplos de uso:
+
+**(docker cp idcontainer:/tmp/prueba ./)**
+
+Copia el fichero “/tmp/prueba” del contenedor con identificador o nombre “idcontainer” al
+directorio actual de la máquina que ejerce como anfitrión.
+
+**(docker cp ./miFichero idcontainer:/tmp)**
+
+Copia el fichero “miFichero” del directorio actual al directorio “/tmp” del contenedor.
+La descripción completa del comando “docker cp” la podéis encontrar en
+
+**(https://docs.docker.com/engine/reference/commandline/cp/.)**
+
+
+## 11. ACCEDIENDO A UN PROCESO EN EJECUCIÓN CON “DOCKER ATTACH”
+
+En algunos casos, deseamos enlazar la entrada o salida estándar de nuestra terminal a un
+contenedor que está ejecutando un proceso en segundo plano, de forma similar a la siguiente
+
+**(docker attach [OPCIONES] IDENTIFICADOR/NOMBRE)**
+
+Para probarlo utilizaremos el siguiente ejemplo:
+
+El ejemplo consiste en crear un contenedor que lanza un proceso que genera texto (imprimiendo
+la fecha) por la salida estándar de forma indefinida. El comando llama a “sh” con el parámetro -c
+(que indica que la siguiente cadena es algo a procesar por la “shell” sh), seguido de una cadena con
+un “shell script”. Aquí vemos el comando, que podríamos lanzar en cualquier terminal.
+
+**(sh -c "while true; do $(echo date); sleep 1; done")**
+
+Aplicamos este comando a nuestro ejemplo creando un contenedor:
+
+**(docker run -d --name=muchotexto busybox sh -c "while true; do $(echo date); sleep 1; done")**
+
+Con ese contenedor en marcha, ya podemos probar “docker attach”. Podremos enlazar la entrada
+y salida del proceso en ejecución a nuestra terminal y observar el texto generado usando:
+
+**(docker attach muchotexto)**
+
+La descripción completa del comando “docker attach” la podéis encontrar en
+(**https://docs.docker.com/engine/reference/commandline/attach/.**)
+
+## 12. OBTENIENDO INFORMACIÓN DE LOS LOGS CON “DOCKER LOGS”
+
+Podemos consultar la información generada con el comando **“docker logs”**
+
+(**docker logs [OPCIONES] IDENTIFICADOR/NOMBRE**)
 

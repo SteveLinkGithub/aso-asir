@@ -176,11 +176,11 @@ En esta unidad aprendemos a instalar Docker y a configurar algunos aspectos bás
 
 # PASOS PARA INSTALAR Y DESINSTALAR DOCKER EN UBUNTU, WINDOWS Y MAC OS
 
-## 2.2.1 Paso 1: Eliminando versiones antiguas de Docker Engine
+### 2.2.1 Paso 1: Eliminando versiones antiguas de Docker Engine
 
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
-## 2.2.2 Paso 2: Incluir el repositorio de Docker CE
+### 2.2.2 Paso 2: Incluir el repositorio de Docker CE
 
 sudo apt-get update
 
@@ -223,7 +223,7 @@ echo \
 https://download.docker.com/linux/ubuntu \
 kinetic stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-## 2.2.3 Paso 3: Instalando Docker Engine CE
+### 2.2.3 Paso 3: Instalando Docker Engine CE
 
 sudo apt-get update
 
@@ -232,7 +232,7 @@ docker-compose-plugin
 
 sudo docker version
 
-## 2.3.1 Permitir administrar Docker con usuarios sin privilegios
+### 2.3.1 Permitir administrar Docker con usuarios sin privilegios
 
 **Docker utiliza sockets Unix. Para la creación y reserva de un socket Unix, es necesario tener
 permisos de root, por lo cual Docker Engine necesita permisos de root para ejecutarse.**
@@ -266,7 +266,7 @@ sudo rm -rf ~/.docker/
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chmod g+rwx "$HOME/.docker" -R
 
-## 2.3.2 Activar/desactivar arranque al inicio
+### 2.3.2 Activar/desactivar arranque al inicio
 
 **Para indicar que el servicio de Docker se inicie al arrancar la máquina, podemos indicarlo mediante
 los siguientes comandos:**
@@ -284,7 +284,7 @@ sudo systemctl disable containerd.service
 sudo systemctl start/stop/restart docker.service
 sudo systemctl start/stop/restart containerd.service
 
-## 2.4 Desinstalando Docker en Ubuntu
+### 2.4 Desinstalando Docker en Ubuntu
 
 **Si en algún momento queremos desinstalar Docker en Ubuntu, podemos usar el comando**
 
@@ -319,7 +319,7 @@ La principal diferencia entre ellas, es que el primer grupo requiere que se acti
 de Windows para Hyper-V, mientras que la segunda guía requiere la activación de WSL2 (Windows
 Subsystem for Linux 2).
 
-## 3.1 Pasos previos Windows 10 Pro y Windows Server: activando Hyper-v
+### 3.1 Pasos previos Windows 10 Pro y Windows Server: activando Hyper-v
 
 En este enlace se explica cómo habilitar Hyper-V en:
 
@@ -329,7 +329,7 @@ En este enlace se explica cómo habilitar Hyper-V en:
 - Windows Server
 ○ https://docs.microsoft.com/es-es/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server
 
-## 3.2 Pasos previos Windows 10 Home: Instalando WSL2
+### 3.2 Pasos previos Windows 10 Home: Instalando WSL2
 
 **Guía para instalarlo:**
 
@@ -363,7 +363,7 @@ WSL2 como la versión por defecto al instalar una distribución de Linux.
 
 Con esto terminaríamos la instalación de docker en Windows.
 
-## 3.3 Instalación de Docker Desktop
+### 3.3 Instalación de Docker Desktop
 
 La instalación de Docker Desktop, que es la versión de Docker CE para sistemas Windows, es
 sencilla y básicamente consiste en descargar el instalador desde Docker Hub, en el siguiente enlace
@@ -376,7 +376,7 @@ Una vez la tengamos instalado comprobaremos que Docker Engine CE se ha instalado
 
 docker version
 
-## 3.4 Resolviendo problemas en la instalación de Docker Desktop
+### 3.4 Resolviendo problemas en la instalación de Docker Desktop
 
 **Docker Desktop puede dar problemas, incluso al instalar actualizaciones, por eso podría a dar algunos bugs típicos:**
 
@@ -415,5 +415,12 @@ instalación en pantalla.**
 # UD03. PRINCIPALES ACCIONES CON DOCKER
 
 ## 1. INTRODUCCIÓN
+
+En esta unidad explicaremos algunas de las principales acciones básicas que podemos realizar con
+Docker.
+
+## 2. ¿GESTIONAREMOS DOCKER MEDIANTE INTERFAZ GRÁFICA?
+
+Aunque hay herramientas gráficas para gestionar Docker, se trabajará únicamente con la línea de comandos para comprender mejor su funcionamiento.
 
 

@@ -329,6 +329,40 @@ En este enlace se explica cómo habilitar Hyper-V en:
 - Windows Server
 ○ https://docs.microsoft.com/es-es/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server
 
+## 3.2 Pasos previos Windows 10 Home: Instalando WSL2
 
+**Guía para instalarlo:**
+
+https://docs.microsoft.com/en-us/windows/wsl/install-win10
+
+**En primer lugar, utilizando una consola PowerShell con permisos de administrador, debemos
+habilitar WSL. Lo podemos hacer con el comando.**
+
+dism.exe /online /enable-feature 
+/featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+**Una vez habilitado, debemos asegurarnos que tenemos nuestro Windows 10 Home actualizado, al
+menos hasta la versión “Versión 1903, Build 18362”. Puedes comprobar tu versión ejecutando el
+comando “winver”.**
+
+**Una vez actualizado y reiniciado el sistema, debemos habilitar la característica de “Virtual
+Machine”, lo cual podemos hacerlo con una consola powershell con permisos de administrador:**
+
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform
+/all /norestart
+
+**Tras ello, deberás reiniciar tu máquina antes del próximo paso.**
+
+Una vez completado el reinicio, deberás instalar la última versión del Kernel de Linux para WSL2
+aquí https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+
+Finalizada la instalación, con una powershell con permisos de administrador, deberás establecer
+WSL2 como la versión por defecto al instalar una distribución de Linux.
+
+**(wsl --set-default-version 2)**
+
+Con esto terminaríamos la instalación de docker en Windows.
+
+## 3.3 Instalación de Docker Desktop
 
 

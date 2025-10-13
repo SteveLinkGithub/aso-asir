@@ -974,7 +974,7 @@ Más información de los comandos en:
 ## 5. EXPORTANDO/IMPORTANDO IMÁGENES LOCALES A/DESDE FICHEROS
 
 Una vez que tengamos una imagen local en nuestro sistema, podemos hacer una copia de la misma, ya sea como copia de seguridad 
-o como forma de transportarla a otros sistemas, mediante el comando **“docker save. Por ejemplo“**, se puede hacer de estas dos formas:
+o como forma de transportarla a otros sistemas, mediante el comando **“docker save. Por ejemplo”**, se puede hacer de estas dos formas:
 
 (**docker save -o copiaSeguridad.tar sergi/ubuntumod**)
 
@@ -997,12 +997,77 @@ Más información sobre los comandos:
 
 - **Docker load**: https://docs.docker.com/engine/reference/commandline/load/
 
+## 6. SUBIENDO NUESTRAS PROPIAS IMÁGENES A UN REPOSITORIO (DOCKER HUB)
 
+Podemos subir una imagen a un repositorio (por defecto Docker Hub). Para ello, debemos realizar
+los siguientes pasos:
 
+## 6.1 Paso 1: creando repositorio para almacenar la imagen en Docker Hub
 
+En primer lugar, debéis crearos una cuenta en https://hub.docker.com e iniciar sesión. Una vez
+iniciada sesión, debéis acceder a **“Repositories”** y ahí a “Create repository” de forma similar
 
+Tras ello, podréis quedar un repositorio con vuestra cuenta y elegir si dicho repositorio es público
+(cualquiera puede acceder) o privado (solo puede acceder dueño o autorizados).
 
+Una vez creado, si tu usuario es **“sergi”** y la imagen se llama **“prueba”**, podremos referenciarla en
+distintos contextos como **“sergi/prueba”**
 
+## 6.2 Paso 2: almacenando imagen local en repositorio Docker Hub
+
+En primer lugar, deberemos iniciar sesión mediante consola al repositorio mediante el comando
+(**docker login**)
+
+Una vez iniciada sesión, debemos hacer un **“commit”** local de la imagen, siguiendo la estructura
+vista en puntos anteriores. Un ejemplo podría ser:
+
+(**docker commit -a "Sergi" -m "Ubuntu modificado" IDCONTENEDOR
+sergi/prueba**)
+
+Hecho este “commit” local, debemos subirlo usando “docker push”
+(**docker push sergi/prueba**)
+
+Una vez hecho eso, si la imagen es pública (o privada con permisos), cualquiera podrá descargarla
+y crear contenedores usando **“docker pull”** o **“docker run”**.
+
+Más información de los comandos:
+
+- **Docker login** https://docs.docker.com/engine/reference/commandline/login/
+
+- **Docker push** https://docs.docker.com/engine/reference/commandline/push/
+
+## 7. GENERAR AUTOMÁTICAMENTE NUESTRAS PROPIAS IMÁGENES MEDIANTE DOCKERFILE
+
+Docker nos permite generar de forma automática nuestras propias imágenes usando **“docker
+build”** y los llamados **“Dockerfile”**.
+
+#### 7.1 Editor Visual Studio Code y plugins asociados a Docker
+
+Los ficheros **“Dockerfile”** pueden crearse con cualquier editor de texto, pero desde aquí
+recomendamos el editor multiplataforma **“Visual Studio Code”** https://code.visualstudio.com/
+Para saber más sobre cómo usar este editor podéis usar https://code.visualstudio.com/learn
+
+Al instalarlo, si detecta Docker instalado en el sistema, el propio editor nos sugerirá una serie de
+plugins. Merece la pena instalarlos. Si no, siempre podéis buscar en plugins manualmente. 
+
+#### 7.2 Creando nuestro primer Dockerfile
+
+Empezaremos creando un sencillo **“Dockerfile”** donde crearemos una imagen de Ubuntu con el
+editor de texto **“nano”** instalado. Para ello indicaremos:
+
+- De qué imagen base partiremos.
+- Qué comandos lanzaremos sobre la imagen base, para crear la nueva imagen
+- Qué comando se asociará por defecto al lanzar un contenedor con la nueva imagen
+
+Creamos el fichero **“Dockerfile”** (Visual Studio Code le pondrá un icono de la ballena) y añadimos:
+
+FROM ubuntu:latest
+RUN apt update && apt install -y nano
+# Aquí un comentario
+CMD /bin/bash
+
+Si ahora usamos el comando “docker build” de la siguiente forma:
+(**docker build -t ubuntunano ./**)
 
 
 

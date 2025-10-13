@@ -1063,11 +1063,45 @@ Creamos el fichero **“Dockerfile”** (Visual Studio Code le pondrá un icono 
 
 FROM ubuntu:latest
 RUN apt update && apt install -y nano
-# Aquí un comentario
+#Aquí un comentario
 CMD /bin/bash
 
 Si ahora usamos el comando “docker build” de la siguiente forma:
 (**docker build -t ubuntunano ./**)
+
+Lo que hemos hecho es ejecutar lo que marca el Dockerfile. El resultado se ha guardado en una nueva imagen local, cuyo nombre hemos especificado con la opción -t. 
+El lugar donde se encontraba el Dockerfile se ha indicado mediante ./ (directorio actual).
+
+**Atención:** el fichero debe llamarse exactamente “Dockerfile”, respetando mayúsculas y minúsculas.
+
+Si queréis especificar un nombre de fichero distinto a buscar en el directorio, puede usarse la
+opción **“-f”**, como en este ejemplo:
+
+(**docker build -t ubuntunano -f Dockerfile2 ./**)
+
+Podemos observar que hemos creado con **“docker history”**
+
+Donde observamos, que nuestra imagen ha crecido en “28.6MB” al hacer **“apt update && apt
+install -y nano”**. Aunque en el anterior **“Dockerfile”** hemos usado un solo RUN, podríamos haber
+utilizado varios RUN en lugar de uno, escrito de una forma secuencial, como vemos en:
+
+FROM ubuntu:latest
+RUN apt update
+RUN apt install -y nano
+CMD /bin/bash
+
+Aquí, simplemente, habría más capas intermedias, como se observa en “docker history”, si la generamos con la secuencia anterior.
+
+Los comandos vistos (FROM, RUN y CMD) admiten distintos formatos. Para saber más podemos
+visitar su ayuda: https://docs.docker.com/engine/reference/builder/
+
+#### 7.3 Otros comandos importantes de Dockerfile
+
+Al crear un “Dockerfile” hay multitud de comandos. A continuación explicamos los comandos más
+importantes a utilizar:
+
+
+
 
 
 

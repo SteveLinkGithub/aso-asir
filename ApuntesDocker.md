@@ -1100,10 +1100,118 @@ visitar su ayuda: https://docs.docker.com/engine/reference/builder/
 Al crear un “Dockerfile” hay multitud de comandos. A continuación explicamos los comandos más
 importantes a utilizar:
 
+#### 7.3.1 Comando EXPOSE
+
+En primer lugar, repasamos la diferencia entre exponer y publicar puertos en Docker:
+
+- Si no se expone ni publica un puerto, este solo es accesible desde el interior del
+contenedor.
+
+- Exponer un puerto, indica que ese puerto es accesible tanto dentro del propio contenedor
+como por otros contenedores, pero no desde fuera (incluido el anfitrión).
+
+- Publicar un puerto, indica que el puerto es accesible desde fuera del contenedor, por lo
+cual debe asociarse a un puerto del anfitrión.
 
 
+La opción EXPOSE nos permite indicar los puertos por defecto que tendrá un contenedor basado en esta imagen. Es similar a la opción --expose de docker run (y, de paso, recordamos que docker run con -p los publica). Por ejemplo, para exponer los puertos 80, 443 y 8080 indicaremos:
 
+**(EXPOSE 80 443 8080)**
 
+#### 7.3.2 Comando ADD/COPY
+
+**ADD** y **COPY** son comandos para copiar ficheros de la máquina anfitriona al nuevo contenedor. Se recomienda usar **COPY**, excepto cuando queramos descomprimir un archivo “zip”, ya que **ADD** permite su descompresión. Más información sobre la diferencia entre **ADD** y **COPY**: 
+https://nickjanetakis.com/blog/docker-tip-2-the-difference-between-copy-and-add-in-a-dockerile
+
+Ejemplo de uso de **ADD**:
+**(ADD ./mifichero.zip /var/www/html)**
+
+Descomprimirá el contenido de **“mifichero.zip”** en el directorio destino de la nueva imagen.
+Ejemplo de uso de **COPY**:
+
+**(COPY ./mifichero.zip /var/www/html)**
+
+O incluso accediendo desde la web.
+
+**(COPY http://miservidor.commifichero.zip /var/www/html)**
+
+En este caso, copiará el fichero **“mifichero.zip”** en el directorio destino de la nueva imagen.
+
+#### 7.3.3 Comando ENTRYPOINT
+
+Por defecto, los contenedores Docker están configurados para ejecutar los comandos que se lancen mediante **“/bin/sh -c”**. Dicho de otra forma, los comandos que lanzábamos eran parámetros para **“/bin/sh -c”**. Podemos cambiar qué comando se usa para esto con **ENTRYPOINT**.
+
+Por ejemplo:
+
+**ENTRYPOINT** ["cat"]
+**CMD** ["/etc/passwd"]
+
+Indicaremos que los comandos sean lanzados con **“cat”**. Al lanzar el comando **“/etc/passwd”**,
+realmente lo que haremos es que se lanzará **“cat /etc/passwd”**.
+
+#### 7.3.4 Comando USER
+
+Por defecto, todos los comandos lanzados durante la creación de la imagen se ejecutan con el usuario root (usuario con UID=0). Para cambiar esto, podemos usar el comando **USER**, indicando el nombre de usuario o UID con el que queremos que se ejecute el comando. Por ejemplo:
+
+**USER** sergi
+**CMD** id
+
+Mostrará con el comando “id” el uid y otra información del usuario “sergi”.
+
+#### 7.3.5 Comando WORKDIR
+
+Cada vez que expresamos el comando **WORKDIR**, estamos cambiando el directorio de la imagen
+donde ejecutamos los comandos. Si este directorio no existe, se crea. Por ejemplo:
+
+**WORKDIR** /root
+**CMD** mkdir tmp
+**WORKDIR** /var/www/html
+**CMD** mkdir tmp
+
+Creará la carpeta **“tmp”** tanto en **“/root”** como en **“/var/www/html”**. Si los directorios **“/root”** o
+**“/var/www/html”** no hubieran existido, los hubiera creado.
+
+#### 7.3.6 Comando ENV
+
+El comando ENV nos permite definir variables de entorno por defecto en la imagen.
+
+(**ENV v1=”valor1” v2=”valor2”**)
+
+Esto definirá las variables de entorno “v1” y “v2” con los valores “valor1” y “valor2”.
+
+#### 7.3.7 Otros comandos útiles: ARG, VOLUME, LABEL, HEALTHCHECK
+
+Aquí comentamos comandos útiles:
+
+- ARG: permite enviar parámetros al propio **Dockerfile** mediante la opción **--build-arg** del comando **docker build**.
+
+- VOLUME: permite establecer volúmenes por defecto en la imagen. (Hablaremos de los volúmenes más adelante en el curso).
+
+- LABEL: permite establecer metadatos dentro de la imagen mediante etiquetas. Uno de los casos más típicos, sustituyendo al comando MAINTAINER que está deprecated, es: LABEL maintainer="sergi.profesor@gmail.com".
+
+- HEALTHCHECK: permite definir cómo se comprobará si el contenedor está funcionando correctamente. Es útil para sistemas orquestadores como **“Docker Swarm”**, aunque otros como **Kubernetes** incorporan su propio sistema.
+
+## 8. TRUCOS PARA HACER NUESTRAS IMÁGENES MÁS LIGERAS
+
+Al crear imágenes, es habitual aumentar el tamaño de las imágenes base. Algunos consejos para
+dentro de lo posible, aumentar el tamaño lo menos posible:
+       - Usar imágenes base ligeras, tipo **“Alpine”**.
+       - No instalar programas innecesarios, incluso evitando herramientas tipo Vim, Nano, etc
+       ○ Mejor usar un solo comando: RUN apt-get install -y <packageA> <packageB>  que usar **“RUN apt-get install -y <packageA>”** y tras ello **“RUN apt-get install -y <packageB>”**
+       - Utiliza comandos de limpieza tras instalaciones con **“apt”**, tales como:
+       ○ **“rm -rf /var/lib/apt/lists/*”** tras crear una imagen para borrar las listas generadas al realizar “apt update”.
+       ○ **“apt-get purge --auto-remove && apt-get clean”** para eliminar temporales de apt
+       
+  - Al usar “apt install” usar la opción **“no-install-recommend”**, para que no instale paquetes
+recomendados asociados al paquete instalado.
+
+  - Analiza tus **“Dockerfile”** con https://www.fromlatest.io/#/ y sigue sus consejos.
+
+Más información en:
+
+- https://hackernoon.com/tips-to-reduce-docker-image-sizes-876095da3b34
+
+- https://medium.com/sciforce/strategies-of-docker-images-optimization-2ca9cc5719b6
 
 
 

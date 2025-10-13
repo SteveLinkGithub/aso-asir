@@ -176,11 +176,11 @@ En esta unidad aprendemos a instalar Docker y a configurar algunos aspectos bás
 
 # PASOS PARA INSTALAR Y DESINSTALAR DOCKER EN UBUNTU, WINDOWS Y MAC OS
 
-### 2.2.1 Paso 1: Eliminando versiones antiguas de Docker Engine
+#### 2.2.1 Paso 1: Eliminando versiones antiguas de Docker Engine
 
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
-### 2.2.2 Paso 2: Incluir el repositorio de Docker CE
+#### 2.2.2 Paso 2: Incluir el repositorio de Docker CE
 
 sudo apt-get update
 
@@ -266,7 +266,7 @@ sudo rm -rf ~/.docker/
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chmod g+rwx "$HOME/.docker" -R
 
-### 2.3.2 Activar/desactivar arranque al inicio
+#### 2.3.2 Activar/desactivar arranque al inicio
 
 **Para indicar que el servicio de Docker se inicie al arrancar la máquina, podemos indicarlo mediante
 los siguientes comandos:**
@@ -497,6 +497,32 @@ Al utilizar el driver “overlay2” sabemos que:
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-18-04-es
 
 
+## 5. CREANDO Y ARRANCANDO CONTENEDORES CON “DOCKER RUN”
+
+### 5.1 ¿Qué hace el comando “docker run”?
+### 5.2 Creando contenedores sin arrancarlos
+
+**Para crear un contenedor sin arrancarlo (recordamos, “docker run” crea y arranca), existe el
+comando “docker create”. La descripción completa del comando “docker create” la podéis
+encontrar en (https://docs.docker.com/engine/reference/commandline/create/)**
+
+Es uno de los comandos más usados en Docker, también permite crear contenedores a partir de una imagen y poder arrancarlo casi de inmediato, es por eso que un
+error común que tienen varias personas sería pensar que docker run solo arranca contenedores, debido a ello en cada ejecución crea un nuevo contenedor.
+
+La descripción completa del comando “docker run” la podéis encontrar en:
+
+https://docs.docker.com/engine/reference/commandline/run/
+
+### 5.3 Repasando caso práctico “Hello World”
+
+Comando para comprobar que funciona docker:
+
+(**docker run hello-world**)
+
+#### 5.3.1 Repaso parte 1: obteniendo la imagen
+
+La documentación en Docker Hub del contenedor que estamos lanzando la tenemos disponible en
+https://hub.docker.com/_/hello-world
 
 
 

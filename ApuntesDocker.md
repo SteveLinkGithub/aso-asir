@@ -694,3 +694,45 @@ Podemos consultar la información generada con el comando **“docker logs”**
 
 (**docker logs [OPCIONES] IDENTIFICADOR/NOMBRE**)
 
+Este uso es similar a “docker attach”, solo que tiene opciones específicas para tratar la información
+obtenida como un log. Partiendo del mismo ejemplo usado en “docker attach”.
+
+(**docker run -d --name=muchotexto busybox sh -c "while true; do $(echo
+date); sleep 1; done"**)
+
+Un ejemplo de uso para obtener logs podría ser
+
+(**docker logs -f --until=2s muchotexto**)
+
+Con este ejemplo, te mostraría los logs generados (realmente la salida estándar y de error),
+incluyendo aquellos que se fueran generando, parando a los dos segundos.
+
+La descripción completa del comando “docker logs” la podéis encontrar en
+
+**(https://docs.docker.com/engine/reference/commandline/logs/.)**
+
+## 13. RENOMBRANDO CONTENEDORES CON “DOCKER RENAME”
+
+El comando **“docker rename”** nos permite cambiar el nombre asociado a un contenedor.
+
+**(docker rename contenedor1 contenedor2)**
+
+Cambia el nombre de **“contenedor1”** a **“contenedor2”**.
+
+La descripción completa del comando **“docker rename”** la podéis encontrar en
+(**https://docs.docker.com/engine/reference/commandline/rename/.**)
+
+## 14. PRINCIPALES PARÁMETROS DEL COMANDO “DOCKER RUN”
+
+Anteriormente, hemos indicado que el comando **“docker run”** es de gran importancia en el uso de
+Docker y que este nos permite crear contenedores a partir de una imagen y arrancarlos.
+La estructura principal del comando es la siguiente
+
+**(docker run [PARAMETROS] IMAGEN [COMANDO AL ARRANCAR] [ARGUMENTOS])**
+
+A continuación mostramos algunos ejemplos de **“docker run”**.
+
+#### 14.1 Ejemplo 1: lanzando Ubuntu y accediendo a una terminal
+
+
+

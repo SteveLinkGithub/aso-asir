@@ -584,4 +584,24 @@ La descripción completa del comando “docker ps” la podéis encontrar en:
 
 ## 7. PARANDO Y ARRANCANDO CONTENEDORES EXISTENTES CON “DOCKER START/STOP/RESTART”
 
+Para arrancar/parar un contenedor ya creado (recordamos, “docker run” crea y arranca), existen
+los comandos “docker start”, “docker stop” y “docker restart”.
+
+La forma más habitual de usar estos comandos, es usar el nombre del comando, seguido del
+identificador único o nombre asignado al contendor. Por ejemplo, con identificador:
+
+**(docker start 434d318b3771)**
+
+o con nombre del contenedor
+
+**(docker start stupefied_colden)**
+
+La descripción completa de estos comandos la podéis encontrar en:
+
+- https://docs.docker.com/engine/reference/commandline/start/
+- https://docs.docker.com/engine/reference/commandline/stop/
+- https://docs.docker.com/engine/reference/commandline/restart/
+
+## 8. INSPECCIONANDO CONTENEDORES CON “DOCKER INSPECT”
+
 

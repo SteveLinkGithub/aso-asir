@@ -473,7 +473,16 @@ Para más detalles sobre los drivers de almacenamiento, se puede consultar:
 
 **Directorio de Docker:**
 
+Directorio donde se almacena todo lo relacionado con Docker.
+
 (**Docker Root Dir: /var/lib/docker**)
+
+Al utilizar el driver “overlay2” sabemos que:
+
+- Las imágenes se almacenan en: /var/lib/docker/overlay2
+- Están formadas por capas
+- La configuración de los contenedores se guarda en: /var/lib/docker/containers.
+- 
 
 
 

@@ -454,6 +454,26 @@ con valores por defecto, que se pueden personalizar al crear el contenedor.
 ○ **Símil:** La imagen es como un DVD de instalación de Linux, y el contenedor es el sistema ya instalado.
 
 
+### 3.2 ¿Dónde se almacenan imágenes, contenedores y datos?
+
+La ubicación donde Docker almacena contenedores e imágenes depende del **sistema operativo, distribución, driver de almacenamiento y versión**.
+Se puede consultar esta información usando el comando:
+
+(**docker info**)
+
+El comando docker info muestra el estado de Docker e información clave como:
+
+- Directorio de Docker: dónde se almacenan imágenes y contenedores.
+
+- Driver de almacenamiento: por ejemplo, overlay2 funcionando sobre un sistema de archivos como ext4.
+
+Para más detalles sobre los drivers de almacenamiento, se puede consultar:
+
+(https://docs.docker.com/storage/storagedriver/select-storage-driver/)
+
+**Directorio de Docker:**
+
+(**Docker Root Dir: /var/lib/docker**)
 
 
 

@@ -173,6 +173,10 @@ En esta unidad aprendemos a instalar Docker y a configurar algunos aspectos bás
 - La recomendación general sigue siendo usar **Linux** para minimizar problemas y garantizar un mejor rendimiento.  
 - Con Docker instalado se puede empezar a experimentar con contenedores, tanto para desarrollo como para despliegue de aplicaciones y servicios.
 
+## 2.2.1 Paso 1: Eliminando versiones antiguas de Docker Engine
+
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
 ## 2.2.2 Paso 2: Incluir el repositorio de Docker CE
 
 sudo apt-get update
@@ -187,4 +191,32 @@ sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o
 /etc/apt/keyrings/docker.gpg
 
+**Ahora, solo nos queda añadir el repositorio de Docker CE como fuente para instalación de
+paquetes. MUCHO OJO en este paso en distribuciones derivadas, como Linux Mint. El motivo es
+el siguiente. Al configurar la fuente de paquetes indicamos la versión de Ubuntu. El comando que
+utilizamos para obtener la versión de Ubuntu es el siguiente:
+lsb_release -cs**
+
+**Este comando nos dirá qué distribución tenemos. Por ejemplo, si tenemos “Ubuntu Kinetic 22.10
+(LTS)”, este comando imprimirá por pantalla “Kinetic”.
+En algunas versiones derivadas de Ubuntu, como Linux Mint, aunque la distribución esté basada en
+Ubuntu Kinetic, no devolverá el texto “Kinetic”, sino otro diferente. Si estáis en este caso, deberéis
+introducir a mano la versión de Ubuntu en que se basa vuestra distribución (sustituyendo el
+comando de “lsb_release -cs” de la siguiente línea)**
+
+Aclarado esto, con el siguiente comando podéis añadir el repositorio:
+
+echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg]
+https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >
+/dev/null
+
+**O en el caso que tengáis una distribución basada en Ubuntu con el problema comentado
+anteriormente, sustituir “$(lsb_release -cs)” a mano por el nombre, de una forma similar a:**
+
+echo \
+"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg]
+https://download.docker.com/linux/ubuntu \
+kinetic stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 

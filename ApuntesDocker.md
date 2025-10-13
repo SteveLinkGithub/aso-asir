@@ -174,7 +174,7 @@ En esta unidad aprendemos a instalar Docker y a configurar algunos aspectos bás
 - Con Docker instalado se puede empezar a experimentar con contenedores, tanto para desarrollo como para despliegue de aplicaciones y servicios.
 
 
-# PASOS PARA INSTALAR Y DESINSTALAR DOCKER EN UBUNTU, WINDOWS Y MACOS
+# PASOS PARA INSTALAR Y DESINSTALAR DOCKER EN UBUNTU, WINDOWS Y MAC OS
 
 ## 2.2.1 Paso 1: Eliminando versiones antiguas de Docker Engine
 
@@ -301,5 +301,36 @@ sudo docker system prune -a
 mismas, con el comando:**
 
 sudo rm -rf /var/lib/docker
+
+## 3. INSTALACIÓN DE DOCKER EN SISTEMAS WINDOWS
+
+En este apartado veremos cómo instalar Docker Desktop en sistemas Windows.
+Docker posee dos guías diferenciadas de instalación en sistemas Windows:
+
+- Guía para Windows 10 Pro y Windows Server
+
+ https://docs.docker.com/docker-for-windows/install/
+
+- Guía para Windows 10 Home
+
+○ https://docs.docker.com/docker-for-windows/install-windows-home/
+
+La principal diferencia entre ellas, es que el primer grupo requiere que se activen las características
+de Windows para Hyper-V, mientras que la segunda guía requiere la activación de WSL2 (Windows
+Subsystem for Linux 2).
+
+## 3.1 Pasos previos Windows 10 Pro y Windows Server: activando Hyper-v
+
+En este enlace se explica cómo habilitar Hyper-V en:
+
+- Windows 10 Pro
+○ https://docs.microsoft.com/es-es/virtualization/hyper-v-on-windows/quick-start/en
+able-hyper-v
+
+- Windows Server
+○ https://docs.microsoft.com/es-es/windows-server/virtualization/hyper-v/get-starte
+d/install-the-hyper-v-role-on-windows-server
+
+
 
 

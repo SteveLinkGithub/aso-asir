@@ -844,6 +844,135 @@ Los parámetros nuevos incluidos en esta orden son:
 
 # UD04. GESTIÓN DE IMÁGENES EN DOCKER
 
+Hasta ahora, hemos visto cómo descargar y trabajar con imágenes de terceros en Docker. En esta unidad explicaremos cómo gestionar las imágenes de contenedores Docker (listado, eliminación, historial, etc.), así como su creación, tanto de forma manual como utilizando el comando **docker build** con los llamados **Dockerfiles**.
+
+## 2. LISTANDO IMÁGENES LOCALES Y PARA SU DESCARGA
+
+#### 2.1 Listando imágenes locales
+
+Podemos obtener información de qué imágenes tenemos almacenadas localmente usando:
+(**docker images**)
+
+El resultado daría a poder ver la información de las imágenes
+
+Podemos utilizar filtros sencillos usando la nomenclatura **“docker images [REPOSITORIO[:TAG]]”**.
+docker images ubuntu:14.04
+(**Nos mostrará la imagen del repositorio “ubuntu” en su versión “14.04”**).
+
+Si queremos utilizar algún filtro avanzado, podemos usar la opción “-f”. Aquí un ejemplo, filtrando
+**(las imágenes que empiecen por “u” y acabe su etiqueta en “04”.)**
+
+Atención: no confundir este comando con **“docker image”** (sin la s final).
+
+Más información en https:(**//docs.docker.com/engine/reference/commandline/images/**)
+
+#### 2.2 Listando imágenes para su descarga
+
+Podemos obtener información de imágenes que podemos descargar en el registro (por defecto,
+Docker Hub) utilizando el comando “docker search”. Por ejemplo, con el siguiente comando:
+(**docker search ubuntu**)
+
+Nos aparecen aquellas imágenes disponibles en el registro (Docker Hub) con esa palabra.
+
+## 3. DESCARGANDO Y ELIMINANDO IMÁGENES (Y CONTENEDORES) LOCALES
+
+#### 3.1 Descargando imágenes con “docker pull”
+
+Podemos almacenar imágenes localmente desde el registro sin necesidad de crear un contenedor mediante el comando docker pull, claramente inspirado en sistemas de control de versiones como **Git**. Para conocer sus nombres y versiones, podemos usar el comando docker search explicado anteriormente o visitar https://hub.docker.com/
+
+(**docker pull alpine:3.10**)
+
+Este comando nos descarga la imagen “alpine” con el tag **“3.10”**.
+
+#### 3.2 Observar el historial de una imagen descargada
+
+Podéis observar el historial de una imagen descargada, es decir, en qué versiones se basa, usando
+el comando **“docker history”**. Por ejemplo con:
+
+(**docker history nginx**)
+
+#### 3.3 Eliminando imágenes con “docker rmi”
+
+Con el comando “docker rmi” podemos eliminar imágenes almacenadas localmente.
+
+(**docker rmi ubuntu:14.04**)
+
+Elimina la imagen ubuntu con la etiqueta 14.04, y de ser una forma de eliminar todas las imágenes locales, que no estén siendo usadas por un contenedor,
+combinando **“docker images -q”** para obtener la lista y **“docker rmi”** es la siguiente:
+
+**docker rmi $(docker images -q)**
+
+Este proceso sirve para el borrado, excepto de aquellas usadas por un contenedor.
+
+#### 3.4 Eliminando contenedores con “docker rm”
+
+Aprovechando que tratamos el borrado de imágenes, comentamos cómo borrar contenedores
+parados (si un contenedor está en marcha, debe ser parado antes del borrado).
+
+Con la siguiente orden se puede borrar un contenedor por identificador o nombre
+**(docker rm IDENTIFICADOR/NOMBRE)**
+
+Asimismo, una forma de borrar todos los contenedores (que estén parados), de forma similar a
+como vimos en el anterior punto, es la siguiente:
+
+**Paso 1 (opcional):** paramos todos los contenedores:
+**docker stop $(docker ps -a -q)**
+
+**Paso 2: borramos todos los contenedores:**
+**docker rm $(docker ps -a -q)**
+
+#### 3.5 Eliminando todas las imágenes y contenedores con “docker system prune -a”
+
+Una forma de realizar las operaciones anteriores de golpe, es usando **“docker system prune -a”**,
+que elimina toda imagen y contenedor parado.
+
+**Paso 1 (opcional):** paramos todos los contenedores:
+**docker stop $(docker ps -a -q)**
+
+**Paso 2: borramos todos los contenedores:**
+**(docker system prune -a)**
+
+## 4. CREANDO NUESTRAS PROPIAS IMÁGENES A PARTIR DE UN CONTENEDOR EXISTENTE
+
+El sistema de imágenes de Docker funciona como un control de versiones por capas, de forma similar a la herramienta Git para control de versiones. Podemos entender que un contenedor es como una capa temporal de una imagen, por lo cual podemos hacer un commit y convertir esa capa temporal en una imagen. La sintaxis más habitual es la siguiente: 
+
+(**docker commit -a "autor" -m "comentario" ID/NOMBRE-CONTENEDOR
+usuario/imagen:[version]**)
+
+Por ejemplo, si tenemos un contenedor con nombre **“ubuntumod”** que simplemente es un
+contenedor basado en la imagen “ubuntu” en el que se ha instalado un programa y hacemos:
+
+(**docker commit -a "Sergi" -m "Ubuntu modificado" IDCONTENEDOR
+sergi/ubuntumod:2021**)
+
+y tras ello, comprobamos las imágenes con
+
+(**docker images**)
+
+Hemos obtenido lo siguiente: una nueva imagen, con nombre **“sergi/ubuntumod”** con tag **“2021”**,
+donde **“sergi”** actúa como nombre de usuario para usarlo en un repositorio remoto (recordamos
+nuevamente, que por defecto es **“Docker Hub”**).
+
+Ahora ya podríamos crear nuevos contenedores con esa imagen, usando por ejemplo:
+(**docker run -it sergi/ubuntumod:2021**)
+
+Si quisiéramos añadir una nueva etiqueta a la imagen, como **“latest”**, podemos usar el comando
+**“docker tag”**, teniendo en cuenta que una misma imagen puede tener varias etiquetas:
+
+(**docker tag sergi/ubuntumod:2021 sergi/ubuntumod:latest**)
+
+Para eliminar una etiqueta, simplemente deberemos borrar la imagen con **“docker rmi”**. La imagen
+se mantendrá mientras al menos tenga una etiqueta. Por ejemplo con:
+
+(**docker rmi sergi/ubuntumod:2021**)
+
+
+
+
+
+
+
+
 
 
 

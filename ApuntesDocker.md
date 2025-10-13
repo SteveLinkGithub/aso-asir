@@ -734,5 +734,45 @@ A continuación mostramos algunos ejemplos de **“docker run”**.
 
 #### 14.1 Ejemplo 1: lanzando Ubuntu y accediendo a una terminal
 
+Utilizando el comando
+
+(**docker run -it --name=nuestroUbuntu1 ubuntu /bin/bash**)
+
+Estamos creando un nuevo contenedor a partir de la imagen **“ubuntu”**. Al crear este contenedor
+hemos especificado los siguientes parámetros:
+
+- **Parámetro “-i”: indica que el proceso lanzado en el contenedor docker estará en modo
+interactivo, es decir, enlaza la entrada estándar cuando se asigna un proceso a una
+terminal.**
+
+- **Parámetro “-t”: asigna al proceso lanzado al arrancar el contenedor una pseudo terminal,
+facilitando el acceso al mismo desde nuestra terminal.**
+
+- **Parámetro “--name”: nos permite establecer un nombre a nuestro contenedor. Si no indicamos este parámetro,
+  nos creará un nombre aleatorio.**
+
+Por último, el comando ejecutado al lanzarse el contenedor es **/bin/bash**. Esto, combinado con los parámetros **-it** (**que entraban en modo interactivo y asociaban una pseudoterminal**), nos hace que justo después de lanzar el comando estemos en una shell dentro del contenedor creado. Al finalizar dicha shell (**con exit, control+c, etc.**), el contenedor se parará. Los cambios que hayamos hecho con la shell, como por ejemplo crear un directorio, se almacenarán como una imagen temporal (**veremos en profundidad las imágenes en otra unidad**) y, a efectos prácticos, los cambios serán permanentes al arrancar de nuevo este contenedor.
+
+#### 14.2 Ejemplo 1 EXTRA: accediendo a terminal desde el contenedor parado
+
+El ejemplo anterior nos permitía acceder, crear un contenedor y entrar de forma interactiva a dicha shell, pero al salir de la shell el contenedor simplemente se paraba. Entonces, ¿cómo podríamos volver a ese contenedor y a dicha shell? Para ello, usaremos el comando **docker start**. Este comando nos permite arrancar un contenedor que está detenido. Al arrancarlo, no necesitamos especificar un comando a ejecutar, ya que se ejecutará el comando que hubiéramos definido anteriormente con docker run o, si no se especificó ninguno, se usará el comando por defecto de la imagen.
+
+El comando **“docker start”** sigue la siguiente estructura:
+(**docker start [PARAMETROS] IDENTIFICADOR/NOMBRE**)
+
+Podemos obtener identificador único o nombre usando el comando:
+(**docker ps -a**)
+
+Tras ello, lanzamos el contenedor de la siguiente forma:
+(**docker start -ai IDENTIFICADOR**)
+
+Los parámetros especificados a **“docker start”** son los siguientes:
+
+- Parámetro **“-a”**: al arrancar el contenedor, enlaza la salida estándar y de error del
+contenedor a nuestra terminal.
+- Parámetro **“-i”**: al arrancar el contenedor, lo hace en modo interactivo, es decir enlazando
+la entrada estándar del contenedor a nuestra terminal.
+
+#### 14.3 Ejemplo 2: ejecutando una versión de una imagen y autoeliminando el contenedor
 
 

@@ -537,6 +537,51 @@ Para instalar una versión específica, debemos usar el formato "imagen:nombreve
 
 #### 5.3.2 Repaso parte 2: el contenedor se crea y ejecuta un comando
 
+Una vez descargada la imagen, se crea el contenedor, se inicia y ejecuta un proceso. Este proceso
+lo podemos proporcionar dentro de la orden “docker run” o si, como en el caso concreto de este
+ejemplo, no lo hemos proporcionado, ejecutará un comando predefinido por la propia imagen.
 
+En este caso concreto, al no haber especificado ningún comando, al iniciarse el contenedor lanza
+un programa por defecto llamado “hello” y nos muestra por la salida estándar información de
+como Docker nos ha generado un mensaje.
+
+Si tenéis curiosidad por ver el código fuente del programa “hello”, está disponible en
+https://github.com/docker-library/hello-world/blob/master/hello.c
+
+El programa muestra un mensaje que explica cómo el cliente de Docker se conectó con el servicio, descargó la imagen (si no estaba localmente), 
+creó un contenedor con un comando por defecto y envió el resultado a la terminal.
+
+## 6. LISTAR CONTENEDORES DISPONIBLES EN EL SISTEMA CON “DOCKER PS”
+
+Mediante el comando “docker ps” podemos listar los contenedores en ejecución en el sistema. Si
+ejecutamos el siguiente comando:
+
+(**docker ps**)
+
+Nos aparecerá un listado como este si no tenemos ningún contenedor en ejecución o si tenemos contenedores en ejecución, 
+nos saldrá la lista correspondiente.
+
+Lanzando el siguiente comando:
+
+(**docker ps -a**)
+
+Obtendremos un listado de todos los contenedores, tanto aquellos en funcionamiento como aquellos que están parados.
+
+**La información que obtenemos de los contenedores es la siguiente:**
+
+- CONTAINER_ID: identificador único del contenedor (versión 12 primeros caracteres).
+- IMAGE: imagen utilizada para crear el contenedor.
+- COMMAND: comando que se lanza al arrancar el contenedor.
+- CREATED: cuando se creó el contenedor.
+- STATUS: si el contenedor está en marcha o no (indicando cuánto lleva en marcha o cuánto
+hace que se paró).
+-  PORTS: redirección de puertos del contenedor (lo veremos más adelante en la unidad).
+- NAMES: nombre del contenedor. Se puede generar como parámetro al crear el contenedor,
+o si no se indica nada, el propio Docker genera un nombre aleatorio.
+
+La descripción completa del comando “docker ps” la podéis encontrar en:
+(**https://docs.docker.com/engine/reference/commandline/ps/**)
+
+## 7. PARANDO Y ARRANCANDO CONTENEDORES EXISTENTES CON “DOCKER START/STOP/RESTART”
 
 

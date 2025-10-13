@@ -494,8 +494,9 @@ Al utilizar el driver “overlay2” sabemos que:
 
 **Más información sobre cómo crear un registro privado en:**
 
-https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registr
-y-on-ubuntu-18-04-es
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-18-04-es
+
+
 
 
 

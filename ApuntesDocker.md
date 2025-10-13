@@ -482,7 +482,23 @@ Al utilizar el driver “overlay2” sabemos que:
 - Las imágenes se almacenan en: /var/lib/docker/overlay2
 - Están formadas por capas
 - La configuración de los contenedores se guarda en: /var/lib/docker/containers.
-- 
+- Para datos persistentes o compartidos, se usan los volúmenes
+
+## 4. REGISTRO: DOCKER HUB
+
+- Docker Hub es la plataforma oficial de registro de imágenes Docker.
+- Permite almacenar imágenes públicas o privadas.
+- Tienen una gran cantidad de imágenes, con sus correspondientes instrucciones de uso
+- Tiene un buscador de imágenes: https://hub.docker.com/search?q=&type=image
+- Es el registro por defecto que utiliza Docker, aunque se puede configurar otro o incluso montar un registro privado.
+
+**Más información sobre cómo crear un registro privado en:**
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registr
+y-on-ubuntu-18-04-es
+
+
+
 
 
 

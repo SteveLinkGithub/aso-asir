@@ -430,9 +430,31 @@ Aunque hay herramientas gráficas para gestionar Docker, se trabajará únicamen
 Características de las imágenes y los contenedores
 
 - **Imágenes**
+○  La imagen es una plantilla de solo lectura que se utiliza para crear contenedores. A partir de una imagen pueden crearse múltiples contenedores.
 
+○ Las imágenes, además de tener su sistema de ficheros predefinido, tienen una serie de parámetros predefinidos (comandos, variables de entorno, etc.) 
+con valores por defecto, que se pueden personalizar al crear el contenedor.
 
+○ Docker permite crear nuevas imágenes basándose en imágenes anteriores. Se puede decir que una imagen está formada por un conjunto de “capas” que modifican una imagen base.
+
+- Al crear una nueva imagen, simplemente se añade una capa a la imagen anterior, que actúa como base.
   
 - **Contenedores**
+
+○ Contenedores son instancias de una imagen.
+
+○ Se pueden arrancar, parar y ejecutar.
+
+○ Tienen un ID único de 64 caracteres, aunque normalmente se usa solo los primeros 12.
+
+○ Se pueden referenciar con menos caracteres siempre que sean únicos.
+
+○ si solo un contenedor comienza con “7”, basta con usar “7” para identificarlo. Si hay varios similares, se deben añadir más caracteres.
+
+○ **Símil:** La imagen es como un DVD de instalación de Linux, y el contenedor es el sistema ya instalado.
+
+
+
+
 
 

@@ -365,4 +365,50 @@ Con esto terminaríamos la instalación de docker en Windows.
 
 ## 3.3 Instalación de Docker Desktop
 
+La instalación de Docker Desktop, que es la versión de Docker CE para sistemas Windows, es
+sencilla y básicamente consiste en descargar el instalador desde Docker Hub, en el siguiente enlace
+https://hub.docker.com/editions/community/docker-ce-desktop-windows/ y seguir las
+instrucciones de instalación en pantalla.
+
+**Enlace vieo instalación: https://www.youtube.com/watch?v=_9AWYlt86B8** 
+
+Una vez la tengamos instalado comprobaremos que Docker Engine CE se ha instalado correctamente ejecutando:
+
+docker version
+
+## 3.4 Resolviendo problemas en la instalación de Docker Desktop
+
+**Docker Desktop puede dar problemas, incluso al instalar actualizaciones, por eso podría a dar algunos bugs típicos:**
+
+https://github.com/docker/for-win/issues/7629
+
+https://forums.docker.com/t/docker-starts-but-trying-to-do-anything-results-in-error-during-connect/49007/4
+
+**Por eso, si es posible, se recomienda usar Docker en Linux, donde funciona mejor.**
+
+**Una solución que suele funcionar es hacer un borrado completo:**
+
+**Desinstala Docker Desktop.**
+
+**Ve a C:\Users\tuUsuario y borra la carpeta .docker si existe.**
+
+**Elimina las variables de entorno relacionadas con Docker (empiezan por DOCKER_, como DOCKER_TLS_VERIFY, DOCKER_CERT_PATH, DOCKER_HOST).**
+
+**Cómo hacerlo:**
+
+https://answers.microsoft.com/es-es/windows/forum/windows_10-other_settings/windows-10-variables-de-entorno-windows-10-version/703ea5fa-1db4-46da-8ff7-6261140bf58b
+
+**Reinicia el sistema.**
+
+**Vuelve a instalar Docker Desktop.**
+
+## 4. INSTALACIÓN DE DOCKER EN SISTEMAS MACOS
+
+**Las instrucciones para la instalación de Docker Desktop en MacOS están descritas en:**
+
+https://docs.docker.com/docker-for-mac/install/.
+
+**Para realizar esta instalación, básicamente debe descargarse el paquete “.dmg” de
+https://hub.docker.com/editions/community/docker-ce-desktop-mac/ y seguir las instrucciones de
+instalación en pantalla.**
 

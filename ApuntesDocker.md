@@ -324,12 +324,10 @@ Subsystem for Linux 2).
 En este enlace se explica cómo habilitar Hyper-V en:
 
 - Windows 10 Pro
-○ https://docs.microsoft.com/es-es/virtualization/hyper-v-on-windows/quick-start/en
-able-hyper-v
+○ https://docs.microsoft.com/es-es/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
 
 - Windows Server
-○ https://docs.microsoft.com/es-es/windows-server/virtualization/hyper-v/get-starte
-d/install-the-hyper-v-role-on-windows-server
+○ https://docs.microsoft.com/es-es/windows-server/virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server
 
 
 

@@ -525,7 +525,17 @@ La documentación en Docker Hub del contenedor que estamos lanzando la tenemos d
 https://hub.docker.com/_/hello-world
 
 
+Ahí se nos indica que la imagen “hello-word:latest” no está localmente en nuestro sistema. Al no
+estar, se descarga del registro por defecto (normalmente Docker Hub) y se almacena localmente.
 
+De hecho, si volvemos a hacer el comando “docker run hello-world”, al tener la imagen ya en el
+sistema, no nos aparecerá este texto, ya que la imagen la tenemos almacenada localmente.
+
+Aunque escribamos solo "hello-world", Docker usa en realidad la versión con etiqueta latest (última versión disponible).
+Para instalar una versión específica, debemos usar el formato "imagen:nombreversion".
+
+
+#### 5.3.2 Repaso parte 2: el contenedor se crea y ejecuta un comando
 
 
 

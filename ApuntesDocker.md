@@ -776,7 +776,6 @@ la entrada estándar del contenedor a nuestra terminal.
 #### 14.3 Ejemplo 2: ejecutando una versión de una imagen y autoeliminando el contenedor
 
 Lanzando el siguiente comando:
-
 (**docker run -it --rm ubuntu:14.04 /bin/bash**)
 
 Estamos creando un contenedor con la versión de la imagen **“ubuntu”** etiquetada como **“14.04”**
@@ -788,4 +787,71 @@ Los parámetros nuevos incluidos en esta orden son:
 contenedor del sistema.
 
 #### 14.4 Ejemplo 3: lanzando un servidor web en background y asociando sus puertos
+
+Lanzando el siguiente comando:
+(**docker run -d -p 1200:80 nginx**)
+
+Estamos creando un contenedor usando la imagen nginx:latest, que incluye un servidor web Nginx funcionando en el puerto 80 del contenedor. 
+Este servidor será accesible desde nuestra máquina local mediante la dirección localhost:1200.
+
+##### Los parámetros nuevos incluidos en esta orden son:
+
+- Parámetro **“-d”**: Significa **“detached”**, es decir, que el contenedor se lanza en segundo plano, es por eso que 
+al usar esta opción, no se muestra información de entrada/salida del contenedor, debido a ello la única información que se muestra es el ID del contenedor lanzado.
+
+- Parámetro **“-p”**: Permite mapear puertos del contenedor al host usando el formato **pAnf:pCont**, donde pAnf es el puerto de la máquina anfitrión y pCont el puerto interno del contenedor. Si solo se indica un puerto, por ejemplo **-p 80**, el sistema tomará dicho puerto como el puerto interno del contenedor y asociará un puerto aleatorio libre de la máquina anfitrión. Podremos consultar los puertos expuestos de un contenedor mediante el comando docker ps o el específico para esta tarea docker port <**nombre_contenedor**>.
+
+Podremos consultar los puertos expuestos de un contenedor mediante el comando **“docker ps”** o el específico para esta tarea **“docker port”**.
+
+Atención: el mapeo de puertos solo puede realizarse en el momento de crear el contenedor.
+No se puede modificar el mapeo de puertos con el contenedor ya creado.
+
+Para saber más sobre la imagen que hemos utilizado, en este caso “nginx” podemos consultar su
+(**página en Docker Hub https://hub.docker.com/_/nginx**)
+
+#### 14.5 Ejemplo 3 EXTRA: cambiando el “index.html” y consultando logs
+
+Observando la documentación que nos ofrece la imagen https://hub.docker.com/_/nginx, observamos que la ruta donde se encuentra la página que sirve Nginx está en /usr/share/nginx/html. 
+Accediendo a esa ruta, podríamos modificar el index.html que se muestra cuando nos conectamos al puerto 1200 en nuestra máquina.
+
+Con las herramientas que tenemos, tenemos varias acciones para modificarlo:
+
+- Accede con una **“shell”** con **“docker exec”**, instalar un editor de texto (por ejemplo, con
+**“apt update; apt install nano”**) y editar el fichero desde la consola.
+  
+- Copiar **“index.html”** desde nuestra máquina anfitriona con **“docker cp”**.
+
+También podemos acceder a los logs que nos va generando durante su ejecución. Si por ejemplo
+queremos acceder a las últimas 10 líneas de logs generados, podemos utilizar:
+
+(**docker logs -n 10 NOMBRE_CONTENEDOR**)
+
+#### 14.6 Ejemplo 4: estableciendo variables de entorno
+
+Vamos a ver un sencillo ejemplo donde vamos a establecer una variable de entorno e imprimir su
+valor en pantalla. Ejecutamos el siguiente comando:
+
+(**docker run -it -e MENSAJE=HOLA ubuntu bash**)
+
+Con este ejemplo, al crear el contenedor hemos establecido la variable de entorno **“MENSAJE”** y
+lanzado una terminal. Podemos probar que la variable se ha establecido correctamente usando:
+
+(**echo $MENSAJE**)
+
+Los parámetros nuevos incluidos en esta orden son:
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
 

@@ -840,7 +840,7 @@ lanzado una terminal. Podemos probar que la variable se ha establecido correctam
 
 Los parámetros nuevos incluidos en esta orden son:
 
-
+- Parámetro **“-e”**: El parámetro **-e** nos permite establecer una o varias **variables de entorno**. Este ejemplo nos muestra cómo definir variables de entorno al crear un contenedor. Además, al crear imágenes, es posible establecer variables de entorno con valores por defecto para cada imagen, estos valores se mantendrán salvo que sean sobrescritos mediante el parámetro **-e**.
 
 
 

@@ -173,6 +173,9 @@ En esta unidad aprendemos a instalar Docker y a configurar algunos aspectos bás
 - La recomendación general sigue siendo usar **Linux** para minimizar problemas y garantizar un mejor rendimiento.  
 - Con Docker instalado se puede empezar a experimentar con contenedores, tanto para desarrollo como para despliegue de aplicaciones y servicios.
 
+
+# PASOS PARA INSTALAR Y DESINSTALAR DOCKER EN UBUNTU, WINDOWS Y MACOS
+
 ## 2.2.1 Paso 1: Eliminando versiones antiguas de Docker Engine
 
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -219,4 +222,84 @@ echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg]
 https://download.docker.com/linux/ubuntu \
 kinetic stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+## 2.2.3 Paso 3: Instalando Docker Engine CE
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin
+docker-compose-plugin
+
+sudo docker version
+
+## 2.3.1 Permitir administrar Docker con usuarios sin privilegios
+
+**Docker utiliza sockets Unix. Para la creación y reserva de un socket Unix, es necesario tener
+permisos de root, por lo cual Docker Engine necesita permisos de root para ejecutarse.**
+
+**A veces, en algunos contextos, puede sernos útil que Docker se ejecute por usuarios sin permisos
+de root. Pongamos un contexto de un aula de ordenadores, que será utilizada por alumnos con los
+que queremos realizar actividades que utilizan Docker.**
+
+**(Para ello, en primer lugar crearemos un grupo llamado “docker”.)**
+
+sudo groupadd docker
+
+**Tras ello añadiremos a los usuarios que queremos que usen Docker sin permisos de root al grupo
+con un comando similar al siguiente, donde $USER es el nombre de usuario:**
+
+sudo usermod -aG docker $USER
+
+**si lanzaste comandos de Docker usando sudo con uno de estos usuarios antes de
+esta operación, es posible que al lanzar Docker te aparezca un mensaje similar a este:**
+
+WARNING: Error loading config file: /home/user/.docker/config.json -
+stat /home/user/.docker/config.json: permission denied
+
+**Para arreglar este error, las opciones son eliminar el directorio “.docker” con:**
+
+sudo rm -rf ~/.docker/
+
+
+**o cambiar el propietario y permisos del directorio, usando**
+
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
+
+## 2.3.2 Activar/desactivar arranque al inicio
+
+**Para indicar que el servicio de Docker se inicie al arrancar la máquina, podemos indicarlo mediante
+los siguientes comandos:**
+
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+
+**Si lo que queremos es deshabilitar este arranque automático, podemos usar:**
+
+sudo systemctl disable docker.service
+sudo systemctl disable containerd.service
+
+**Para iniciar/parar/reiniciar los servicios manualmente, podemos usar:**
+
+sudo systemctl start/stop/restart docker.service
+sudo systemctl start/stop/restart containerd.service
+
+## 2.4 Desinstalando Docker en Ubuntu
+
+**Si en algún momento queremos desinstalar Docker en Ubuntu, podemos usar el comando**
+
+sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin
+docker-compose-plugin
+
+**Este comando eliminará Docker Engine, pero no eliminará contenedores e imágenes presentes en
+el sistema. Si queremos eliminar estos datos, tenemos dos opciones.
+La primera consiste en, previamente a la eliminación de Docker Engine, ejecutar el comando:**
+
+sudo docker system prune -a
+
+**La segunda opción, se debe realizar tras eliminar Docker y consiste en el borrado manual de las
+mismas, con el comando:**
+
+sudo rm -rf /var/lib/docker
+
 

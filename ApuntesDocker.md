@@ -172,3 +172,19 @@ En esta unidad aprendemos a instalar Docker y a configurar algunos aspectos bás
 - La unidad muestra cómo instalar Docker en Linux, Windows y MacOS, y cómo realizar configuraciones básicas.  
 - La recomendación general sigue siendo usar **Linux** para minimizar problemas y garantizar un mejor rendimiento.  
 - Con Docker instalado se puede empezar a experimentar con contenedores, tanto para desarrollo como para despliegue de aplicaciones y servicios.
+
+## 2.2.2 Paso 2: Incluir el repositorio de Docker CE
+
+sudo apt-get update
+
+sudo apt-get install apt-transport-https ca-certificates curl
+gnupg-agent software-properties-common
+
+**Una vez realizado este paso, descargamos la clave GPG del repositorio de Docker CE y la
+incluiremos. Podemos hacer todo con las siguientes línea:s**
+
+sudo mkdir -m 0755 -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o
+/etc/apt/keyrings/docker.gpg
+
+

@@ -775,4 +775,17 @@ la entrada estándar del contenedor a nuestra terminal.
 
 #### 14.3 Ejemplo 2: ejecutando una versión de una imagen y autoeliminando el contenedor
 
+Lanzando el siguiente comando:
+
+(**docker run -it --rm ubuntu:14.04 /bin/bash**)
+
+Estamos creando un contenedor con la versión de la imagen **“ubuntu”** etiquetada como **“14.04”**
+en Docker Hub y arrancándolo de forma similar al ejemplo anterior.
+
+Los parámetros nuevos incluidos en esta orden son:
+
+- Parámetro **“--rm”**: este parámetro hará que nada más el contenedor se pare, se borre el
+contenedor del sistema.
+
+#### 14.4 Ejemplo 3: lanzando un servidor web en background y asociando sus puertos
 

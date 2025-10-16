@@ -15,3 +15,14 @@ servidor (yoc-Server) desde la máquina remota (yoc-Client) mediante:
 - Conexión Telnet
 - Conexión segura SSH
 
+
+Primero debemos preparar **el entorno de trabajo**:
+
+Se crea e instala una máquina virtual Debian en configuración de red NAT llamada ioc-Server. 
+Por defecto, el DHCP integrado de VirtualBox asignará a esta máquina la siguiente configuración de IP:
+
+(**root@yoc-Server:~# ifconfig**)
+
+
+
+

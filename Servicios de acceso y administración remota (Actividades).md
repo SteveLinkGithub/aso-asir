@@ -27,37 +27,81 @@ Por defecto, el DHCP integrado de VirtualBox asignará a esta máquina la siguie
 Hemos visto la configuración del servidor con (**ifconfig**).
 
 
-- Antes de continuar, compruebe la conectividad con el exterior, por ejemplo accediendo a Internet con el 
-navegador.
+- **Antes de continuar, compruebe la conectividad con el exterior, por ejemplo accediendo a Internet con el 
+navegador.**
 
 Como tenemos la IP (**10.2.1.254**), como puerta de enlace hacia el exterior haremos ping como prueba.
 
 <img width="516" height="180" alt="image" src="https://github.com/user-attachments/assets/fff2cd02-9bc4-4f73-b49a-5ec26aa82bfe" />
 
-- Añadimos ahora a esta máquina virtual ioc-Server una segunda tarjeta de red, pero esta vez configurada
-como red interna.
+- **Añadimos ahora a esta máquina virtual ioc-Server una segunda tarjeta de red, pero esta vez configurada
+como red interna.**
 
-- Al arrancar de nuevo el equipo reconocerá un segundo adaptador de red que deberemos configurar
+- **Al arrancar de nuevo el equipo reconocerá un segundo adaptador de red que deberemos configurar
 manualmente con IP fija, ya sea editando manualmente el archivo /etc/network/interfaces, mediante la
-aplicación network-manager o la alternativa wicd. Podemos darle una IP del tipo 192.168.56.10.
+aplicación network-manager o la alternativa wicd. Podemos darle una IP del tipo 192.168.56.10.**
 
 Nos vamos al directorio y le daremos la IP que le corresponda.
 
 <img width="766" height="299" alt="image" src="https://github.com/user-attachments/assets/814f6236-b6f2-4008-8cd8-2283cb120cac" />
 
-- Crearemos e instalaremos una segunda máquina virtual Debian (yoc-Client), que actuará de cliente con 
+- **Crearemos e instalaremos una segunda máquina virtual Debian (yoc-Client), que actuará de cliente con 
 sólo una tarjeta de red configurada como red interna y una IP fija del mismo rango que eth2 en el servidor 
-(por ejemplo, 192. 168. 56. 11).
+(por ejemplo, 192. 168. 56. 11).**
 
 Haremos lo mismo con la máquina cliente.
 
 <img width="776" height="312" alt="image" src="https://github.com/user-attachments/assets/68e3f198-5df2-42aa-af1d-f2a68f5a02f1" />
 
-- Opcionalmente completaremos la red interna con una máquina virtual donde instalaremos un sistema
+- **Opcionalmente completaremos la red interna con una máquina virtual donde instalaremos un sistema
 operativo Windows 7 (yoc-w7) por si se quiere realizar pruebas de administración remota con sistemas
-heterogéneos.
+heterogéneos.**
 
 No tenemos un sistema operativo cliente instalado
 
-- Antes de continuar, compruebe la conectividad de la intranet mediante pings entre las máquinas.
+- **Antes de continuar, compruebe la conectividad de la intranet mediante pings entre las máquinas.**
+
+Haremos ping entre la máquina cliente y el servidor.
+
+**Ping 10.2.1.127** y **Ping 10.2.1.128**
+
+<img width="531" height="176" alt="image" src="https://github.com/user-attachments/assets/8e883203-2bf6-456e-9d1e-e5159ac186a6" />
+
+<img width="508" height="183" alt="image" src="https://github.com/user-attachments/assets/e6d356c8-cabe-4db3-8aef-13d25a0ce5a8" />
+
+
+El objetivo es conseguir una estructura de red similar a la de la figura:
+
+<img width="565" height="661" alt="image" src="https://github.com/user-attachments/assets/1efb880c-69c5-4210-9127-dacf95708272" />
+
+
+Ahora comprobaremos la conectividad remota básica.
+
+- Abra las máquinas virtuales que hacen de servidor (yoc-Server) y cliente remoto (yoc-Client).
+
+- Compruebe la conectividad de la intranet haciendo un ping en el servidor desde el cliente.
+
+
+<img width="512" height="170" alt="image" src="https://github.com/user-attachments/assets/2a97ea10-a107-4cda-9580-7303a9b02339" />
+
+
+- Presuponemos que ya están instalados en el servidor y en el cliente los programas Telnet y openSSH. Si no es así, procede a instalarlos según se indica en los apuntes.
+
+- Abra una sesión Telnet en el servidor con un usuario/contraseña válidos y compruebe que puede ejecutar comandos:
+
+<img width="729" height="561" alt="image" src="https://github.com/user-attachments/assets/a3270e6b-4959-47a8-8877-2c05ee0ba61c" />
+
+- Salga de la sesión Telnet:
+
+<img width="292" height="57" alt="image" src="https://github.com/user-attachments/assets/dad95dd8-7e13-44ca-b9c9-53f30f0711a8" />
+
+
+- Ahora pruebe la conexión remota segura SSH:
+
+
+
+
+
+
+
 

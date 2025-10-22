@@ -30,6 +30,10 @@ Hemos visto la configuración del servidor con (**ifconfig**).
 - Antes de continuar, compruebe la conectividad con el exterior, por ejemplo accediendo a Internet con el 
 navegador.
 
+Como tenemos la IP (**10.2.1.254**), como puerta de enlace hacia el exterior haremos ping como prueba.
+
+<img width="516" height="180" alt="image" src="https://github.com/user-attachments/assets/fff2cd02-9bc4-4f73-b49a-5ec26aa82bfe" />
+
 - Añadimos ahora a esta máquina virtual ioc-Server una segunda tarjeta de red, pero esta vez configurada
 como red interna.
 
@@ -37,13 +41,23 @@ como red interna.
 manualmente con IP fija, ya sea editando manualmente el archivo /etc/network/interfaces, mediante la
 aplicación network-manager o la alternativa wicd. Podemos darle una IP del tipo 192.168.56.10.
 
+Nos vamos al directorio y le daremos la IP que le corresponda.
+
+<img width="766" height="299" alt="image" src="https://github.com/user-attachments/assets/814f6236-b6f2-4008-8cd8-2283cb120cac" />
+
 - Crearemos e instalaremos una segunda máquina virtual Debian (yoc-Client), que actuará de cliente con 
 sólo una tarjeta de red configurada como red interna y una IP fija del mismo rango que eth2 en el servidor 
 (por ejemplo, 192. 168. 56. 11).
 
+Haremos lo mismo con la máquina cliente.
+
+<img width="776" height="312" alt="image" src="https://github.com/user-attachments/assets/68e3f198-5df2-42aa-af1d-f2a68f5a02f1" />
+
 - Opcionalmente completaremos la red interna con una máquina virtual donde instalaremos un sistema
 operativo Windows 7 (yoc-w7) por si se quiere realizar pruebas de administración remota con sistemas
 heterogéneos.
+
+No tenemos un sistema operativo cliente instalado
 
 - Antes de continuar, compruebe la conectividad de la intranet mediante pings entre las máquinas.
 

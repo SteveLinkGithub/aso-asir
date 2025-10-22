@@ -98,10 +98,22 @@ Ahora comprobaremos la conectividad remota básica.
 
 - Ahora pruebe la conexión remota segura SSH:
 
+<img width="729" height="418" alt="image" src="https://github.com/user-attachments/assets/43746396-47c7-4978-bbd7-d643c01b07ca" />
+
+La conexión segura nos funciona correctamente.
 
 
+## Restricción de acceso al servicio SSH
 
 
+El objetivo de esta actividad es conocer las acciones preventivas y de seguridad en lo que respecta al acceso al servicio SSH.
 
+Se pide configurar el servidor SSH para que:
+
+- Sólo puedan acceder por SSH los usuarios Josep y Anna.
+
+- Sólo se pueda acceder desde el equipo 192.168.56.15.
+
+### Para restringir el acceso remoto vía SSH a unos usuarios determinados deberemos editar como superusuario ( root ) el archivo de configuración /etc/ssh/sshd_config:
 
 

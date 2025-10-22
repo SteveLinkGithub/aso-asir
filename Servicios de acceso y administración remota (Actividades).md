@@ -22,3 +22,28 @@ Primero debemos preparar el **entorno de trabajo**:
 - Se crea e instala una máquina virtual Debian en configuración de red NAT llamada ioc-Server. 
 Por defecto, el DHCP integrado de VirtualBox asignará a esta máquina la siguiente configuración de IP:
 
+<img width="628" height="298" alt="image" src="https://github.com/user-attachments/assets/1c7cc36b-0a82-4cef-89c7-a58357e92856" />
+
+Hemos visto la configuración del servidor con (**ifconfig**).
+
+
+- Antes de continuar, compruebe la conectividad con el exterior, por ejemplo accediendo a Internet con el 
+navegador.
+
+- Añadimos ahora a esta máquina virtual ioc-Server una segunda tarjeta de red, pero esta vez configurada
+como red interna.
+
+- Al arrancar de nuevo el equipo reconocerá un segundo adaptador de red que deberemos configurar
+manualmente con IP fija, ya sea editando manualmente el archivo /etc/network/interfaces, mediante la
+aplicación network-manager o la alternativa wicd. Podemos darle una IP del tipo 192.168.56.10.
+
+- Crearemos e instalaremos una segunda máquina virtual Debian (yoc-Client), que actuará de cliente con 
+sólo una tarjeta de red configurada como red interna y una IP fija del mismo rango que eth2 en el servidor 
+(por ejemplo, 192. 168. 56. 11).
+
+- Opcionalmente completaremos la red interna con una máquina virtual donde instalaremos un sistema
+operativo Windows 7 (yoc-w7) por si se quiere realizar pruebas de administración remota con sistemas
+heterogéneos.
+
+- Antes de continuar, compruebe la conectividad de la intranet mediante pings entre las máquinas.
+

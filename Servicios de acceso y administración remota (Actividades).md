@@ -116,4 +116,30 @@ Se pide configurar el servidor SSH para que:
 
 ### Para restringir el acceso remoto vía SSH a unos usuarios determinados deberemos editar como superusuario ( root ) el archivo de configuración /etc/ssh/sshd_config:
 
+**$ sudo gedit /etc/ssh/sshd_config**, lo he configurado mediante el editor de textos (**nano**).
+
+<img width="1286" height="807" alt="image" src="https://github.com/user-attachments/assets/25580883-7b69-4de9-abc9-e6a9c2047bba" />
+
+
+y añadir la línea:
+
+<img width="1289" height="936" alt="image" src="https://github.com/user-attachments/assets/9b617f3f-9192-455b-8679-7dc614541e2e" />
+
+Por otra parte, para gestionar el acceso en función de la IP de los equipos debemos editar los archivos de control de acceso a servicios /etc/hosts.allow y /etc/hosts.deny. 
+En este caso, en /etc/host.deny añadimos la siguiente línea para denegar el acceso a cualquier equipo no autorizado:
+
+Añadimos la línea (**sshd**), para entrar he utilizado el editor de textos nano.
+
+<img width="306" height="27" alt="image" src="https://github.com/user-attachments/assets/ba0f188d-b956-4c86-9918-3a5a50533ef6" />
+
+<img width="1284" height="806" alt="image" src="https://github.com/user-attachments/assets/26271f9a-5951-4aa5-a889-b5f3bbc91452" />
+
+
+A /etc/host.allowella añadimos la siguiente línea para definir específicamente los equipos que pueden acceder:
+
+
+
+
+
+
 

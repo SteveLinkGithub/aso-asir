@@ -137,6 +137,27 @@ Añadimos la línea (**sshd**), para entrar he utilizado el editor de textos nan
 
 A /etc/host.allowella añadimos la siguiente línea para definir específicamente los equipos que pueden acceder:
 
+He accedido al archivo, y lo he configurado mediante nano y he añadido esta línea.
+
+(**sshd: 192.168.56.15**)
+
+<img width="295" height="25" alt="image" src="https://github.com/user-attachments/assets/2511ae98-551d-4b52-bbe9-358db8b91162" />
+
+<img width="1285" height="811" alt="image" src="https://github.com/user-attachments/assets/2cb8791c-f456-4515-8bcf-fabef455486b" />
+
+Recuerde que para que los cambios tengan efecto se debe reiniciar el servicio:
+
+(**$ sudo /etc/init.d/ssh restart**), este comando está desactualizado así que para reiniciar, aún así como este sistema es antiguo,
+si nos aceptará el antiguo comando para reiniciar el servicio ssh.
+
+El servicio ssh, deberemos de poner este comando en (**sudo systemctl restart ssh**) vez del otro.
+
+<img width="368" height="115" alt="image" src="https://github.com/user-attachments/assets/49fa41fa-8ef2-4f04-b97e-f81b37da04f7" />
+
+# Acceso a Internet mediante un servidor intermedio y túneles SSH
+
+
+
 
 
 

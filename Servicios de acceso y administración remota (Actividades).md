@@ -156,6 +156,22 @@ El servicio ssh, deberemos de poner este comando en (**sudo systemctl restart ss
 
 # Acceso a Internet mediante un servidor intermedio y túneles SSH
 
+En la configuración de la intranet que hemos diseñado, el ordenador ioc-Client pertenece a la intranet y no tiene acceso a Internet. El 
+objetivo de esta actividad es crear un túnel SSH para conectarnos a un servidor y navegar por páginas web utilizando la conexión a Internet 
+del servidor. Queremos hacerlo mediante dos técnicas:
+
+- La transparencia de red
+
+- El enderezamiento dinámico de puertos: servidor SOCKS
+
+La primera opción permite ejecutar el navegador directamente en el servidor y, mediante el túnel SSH y la 
+transparencia de red, que el resultado se visualice en el servidor X del ordenador cliente.
+
+- Primero debemos asegurarnos de que tenemos iniciado el servicio SSH en el servidor:
+
+(**/etc/init.d/ssh start**), Poniendo este comando desde el cliente iniciaremos el servicio ssh.
+
+<img width="368" height="115" alt="image" src="https://github.com/user-attachments/assets/7282f3e3-8dd6-45ac-87f5-1590c68e9c71" />
 
 
 

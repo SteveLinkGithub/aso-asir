@@ -173,6 +173,19 @@ transparencia de red, que el resultado se visualice en el servidor X del ordenad
 
 <img width="368" height="115" alt="image" src="https://github.com/user-attachments/assets/7282f3e3-8dd6-45ac-87f5-1590c68e9c71" />
 
+- También debemos comprobar que el servidor SSH tiene activado el enderezamiento del protocolo gráfico X11, 
+es decir que deberá tener el parámetro siguiente activado en una línea del archivo de configuración /etc/ssh/ssh_config:
+
+(**// Activación del enderezamiento X en /etc/ssh/sshd_config X11Forwarding yes**)
+
+Tendremos que configurar el archivo de configuración de **ssh_config** mediante el editor de texto nano, para activar el enderezamiento.
+
+Poniendo este comando (**X11Forwading yes**).
+
+<img width="1287" height="805" alt="image" src="https://github.com/user-attachments/assets/f6ac3285-e0a7-41fb-96cf-1c7872a0d728" />
+
+- Ahora podemos ir a la máquina cliente, establecer la sesión remota e iniciar el navegador con el comando:
+
 
 
 

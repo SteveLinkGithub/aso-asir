@@ -186,7 +186,11 @@ Poniendo este comando (**X11Forwading yes**).
 
 - Ahora podemos ir a la máquina cliente, establecer la sesión remota e iniciar el navegador con el comando:
 
+(**ssh -X 192.168.56.10 firefox**)
 
+<img width="1350" height="960" alt="image" src="https://github.com/user-attachments/assets/9793c22c-2211-46c9-b9c5-9b231967027d" />
+
+<img width="1356" height="946" alt="image" src="https://github.com/user-attachments/assets/e364bcce-02df-46f4-93c5-c290ea3cc9b0" />
 
 
 

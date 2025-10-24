@@ -34,6 +34,8 @@ Compresion yes
 User Usarioquecreamos
 Puerto 30**)
 
+A continuación, le daremos a **control-o**
+
 
 
 

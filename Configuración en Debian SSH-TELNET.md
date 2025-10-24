@@ -16,4 +16,25 @@ sería la única manera en que las dos máquinas puedan trabajar juntas, es por 
 
 ## A continuación Procederemos con la instalación de cada máquina (TELNET-SSH)
 
+En este caso, empezaremos con la instalación de **SSH**, así que tendremos que poner este comando para instalarlo (**sudo apt-get install openssh-server**)-(**apt-get install openssh-server**), pero en este caso no hace falta ponerlo en **sudo**,
+ya que en nuestro caso ya somo usuarios **root**, es por eso que para que los nuevos usuarios que creemos desde el servidor no nos dejarán conectarlos al cliente, por la configuración de seguridad que viene por defecto
+en Debian.
+
+El comando para añadir usuarios sería el siguiente:
+
+(**sudo adduser nombre_usuario sudo usermod -aG sudo nombre_usuario**) - (**adduser nombre_usuario sudo usermod -aG sudo nombre_usuario**)
+
+Por eso nos deberemos de meternos a un archivo para que nos deje conectarnos con un usario desde el servidor
+hacia el cliente, para ello deberemos de editar este archivo de texto **ssh_config**, para editarlo nos deberemos de meternos en el directorio (**cd /etc/ssh**),
+y leugo meternos al archivo mediante (**nano ssh_config**), y deberemos de poner lo siguiente, abajo del archivo de configuración:
+
+(**Host IP_SERVIDOR
+Ciphers aes128-cbc
+Compresion yes
+User Usarioquecreamos
+Puerto 30**)
+
+
+
+
 

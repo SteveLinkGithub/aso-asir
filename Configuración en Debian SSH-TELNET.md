@@ -59,8 +59,19 @@ Es por eso que el siguiente paso será instalar **xinetd**, mediante el siguient
 El servicio que hemos instalado tiene la función de escuchar en diferentes puertos y activar el servicio correspondiente **telnetd** o otros servicos únicamente cuando el usuario se conecte mediante **ssh**.
 
 
+## Una vez hayamos instalado los dos servicios procederemos a instalar y configurar el Cliente:
 
 
+Una vez instalado el cliente instalaremos el servicio de **telnet** mediante el comando siguiente:
+
+(**sudo apt-get install telnetd**).
+
+Luego de que se haya instalado en el cliente, pondremos el siguiente comando junto a la IP del servidor
+para establecer una conexión **telnetd** con el servidor. 
+
+(**telnet ip_servidor**).
+
+Para salir escribiremos el comando (**exit**).
 
 
 

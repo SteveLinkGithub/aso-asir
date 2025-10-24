@@ -45,6 +45,21 @@ Una vez configurado todo y ver que nos hemos podido conectar no saldremos del us
 
 ## Ahora instalaremos el TELNET:
 
+Dado que tanto el servidor como el cliente están en una misma red, he añadido el usuario con privilegios de root en el servidor, tendremos que instalar Telnet
+en el cliente y en el servidor: 
+
+Para empezar nos meteremos en el servidor y pondremos el siguiente comando. 
+(**apt-get install telnetd-ssl**), lo que hará será instalar una nueva versión de **telnetd**, centrada en la seguridad.
+
+
+Es por eso que el siguiente paso será instalar **xinetd**, mediante el siguiente comando:
+
+(**sudo apt install xinetd telnetd**).
+
+El servicio que hemos instalado tiene la función de escuchar en diferentes puertos y activar el servicio correspondiente **telnetd** o otros servicos únicamente cuando el usuario se conecte mediante **ssh**.
+
+
+
 
 
 

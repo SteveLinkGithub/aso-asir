@@ -1,7 +1,6 @@
 # Creación de un entorno de trabajo y conectividad básica Telnet y SSH
 
-## Para empezar la configuración de Telnet y SSH, instalaremos la máquina de Debian, para la máquina cliente, clonaremos la misma, para
-después empezar a instalar los servicios de Telnet y SSH.
+## Para empezar la configuración de Telnet y SSH, instalaremos la máquina de Debian, para la máquina cliente, clonaremos la misma, para después empezar a instalar los servicios de Telnet y SSH.
 
 **Tenemos varias maneras de conectar a la misma red la máquina cliente y servidor, 
 pero a continuación pondré las dos dichas en clase:**
@@ -73,7 +72,7 @@ para establecer una conexión **telnetd** con el servidor.
 
 Para salir escribiremos el comando (**exit**).
 
-
+Aparte instalaremos el servico startx y sus derivados para preparar el cliente.
 
 
 

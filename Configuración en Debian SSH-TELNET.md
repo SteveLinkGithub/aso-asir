@@ -34,7 +34,20 @@ Compresion yes
 User Usarioquecreamos
 Puerto 30**)
 
-A continuación, le daremos a **control-o**
+A continuación, le daremos a **control-o**, para guardar cambios y luego le daremos a **control-x** para salir.
+Una vez a fuera pondremos este comando para que se apliquen los cambios (**/etc/init.d/ssh restart**).
+
+
+Por último escribiremos en la terminal, el siguiente comando para conectarnos desde el cliente al servidor con **SSH**: 
+(**shh nombreusuario@ip_servidor**).
+
+Una vez configurado todo y ver que nos hemos podido conectar no saldremos del usario con ssh mediante (**exit**).
+
+## Ahora instalaremos el TELNET:
+
+
+
+
 
 
 

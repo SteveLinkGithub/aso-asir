@@ -192,6 +192,10 @@ Poniendo este comando (**X11Forwading yes**).
 
 <img width="1356" height="946" alt="image" src="https://github.com/user-attachments/assets/e364bcce-02df-46f4-93c5-c290ea3cc9b0" />
 
+**En la parte del alojamiento me ha dado errores he intentado arreglarlo pero he llegado hasta este punto, el resto de la configuración la tengo hecha.**
+
+<img width="735" height="562" alt="image" src="https://github.com/user-attachments/assets/5e82c46e-5f78-42a9-b947-834ca57251b0" />
+
 
 
 

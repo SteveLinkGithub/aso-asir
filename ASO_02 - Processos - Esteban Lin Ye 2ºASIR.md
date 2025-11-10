@@ -15,11 +15,18 @@ Se han descrito el concepto de proceso del sistema, tipos, estados y ciclo de vi
 
 **Tarea a:** Utilice el comando ps junto con opciones de formato (ps -eo state,pid,cmd) y el comando grep para identificar y contar cuántos procesos del sistema se encuentran en los estados 'dormido' (S) o 'zombie' (Z).
 
+<img width="662" height="53" alt="image" src="https://github.com/user-attachments/assets/ef517238-3e04-4979-b97d-792715b377b3" />
+
+El comando (**ps -eo state,pid,cmd | grep -E '^[SZ]' | wc -l**), lo que hace es listar todos los procesos, para después filtrarlos mediante la **S (procesos dormidos)**
+o **Z (procesos zombie)** y cuénta cuántos procesos hay en total.
+
 **b)**
 
 Se han utilizado interrupciones y excepciones para describir los eventos internos del procesador.
 
 **Tarea b:** Examine el sistema de archivos /proc y documente la tabla de interrupciones leyendo el archivo /proc/interrupts. Describa qué tipo de dispositivo está asociado con la interrupción ID 1 (típicamente el teclado/mouse).
+
+
 
 **c)**
 

@@ -26,6 +26,8 @@ Se han utilizado interrupciones y excepciones para describir los eventos interno
 
 **Tarea b:** Examine el sistema de archivos /proc y documente la tabla de interrupciones leyendo el archivo /proc/interrupts. Describa qué tipo de dispositivo está asociado con la interrupción ID 1 (típicamente el teclado/mouse).
 
+<img width="588" height="548" alt="image" src="https://github.com/user-attachments/assets/5bcc75c9-51c5-4ff6-8ee2-38a562103307" />
+
 
 
 **c)**

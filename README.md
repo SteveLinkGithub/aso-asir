@@ -2,7 +2,7 @@
 
 **Begginner programmer and networks managing**
 
-whoami
+whoami <br>
  **estebanjianlinye**
 
 - echo "🎓 Student of CS & Business at IES Font de Sant Lluis"

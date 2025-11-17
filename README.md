@@ -5,19 +5,19 @@
 whoami
  **estebanjianlinye**
 
-echo "🎓 Student of CS & Business at IES Font de Sant Lluis"
-echo "📊 Interests: Networks · AI · Programming · Linux · Windows"
-echo "🎯 Hobbies: Reading · Playing football · Playing Videogames "
+- echo "🎓 Student of CS & Business at IES Font de Sant Lluis"
+- echo "📊 Interests: Networks · AI · Programming · Linux · Windows"
+- echo "🎯 Hobbies: Reading · Playing football · Playing Videogames "
 
-locale -a
-#en_US.utf8             # English — Professional working proficiency
-#es_ES.utf8             # Spanish — Native speaker
+**locale -a**
+- #en_US.utf8             # English — Professional working proficiency
+- #es_ES.utf8             # Spanish — Native speaker
 
   **timedatectl | grep "Time zone"**
 
 Time zone: Europe/Madrid (CEST, +0200)
 
   **Fun facts**
-FAVORITE_COLOR="**0000FF**"
-FAVORITE_NUMBER=10
-DISTRO="Arch Linux"
+- FAVORITE_COLOR="**0000FF**"
+- FAVORITE_NUMBER=10
+- DISTRO="Arch Linux"

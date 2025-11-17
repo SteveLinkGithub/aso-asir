@@ -14,6 +14,7 @@ locale -a
 #es_ES.utf8             # Spanish — Native speaker
 
 timedatectl | grep "Time zone"
+
 # Time zone: Europe/Madrid (CEST, +0200)
 
 # Fun facts

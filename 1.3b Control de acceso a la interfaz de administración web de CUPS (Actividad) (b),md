@@ -1,0 +1,14 @@
+# Control de acceso a la interfaz de administración web de CUPS (b)
+
+Por defecto, sólo se puede acceder a la administración web de CUPS desde la máquina local y por parte de usuarios con derecho de administración. El objetivo de esta actividad es conocer las posibilidades de cambiar los permisos de acceso a CUPS tanto de máquinas remotas como usuarios. Para realizar esta tarea se piden las siguientes actividades:
+
+- Permitir que se pueda acceder a la interfaz web desde cualquier ordenador de la red.
+
+
+
+- Habilitar la interfaz web sólo en modo local o desde una dirección IP concreta.
+
+
+
+- Permitir acceder a toda la interfaz de administración al usuario pepet, al grupo de profesores sólo para la administración de trabajos de impresión ya cualquier usuario correctamente identificado para gestionar las impresoras.
+

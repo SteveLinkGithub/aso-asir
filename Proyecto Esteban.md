@@ -8,7 +8,7 @@
 - Establecimiento y aplicación de contraseñas.
 - Mantener la seguridad de Active Directory.
 
-## Objetivos de aprendizaje
+### Objetivos de aprendizaje
 
 **En este módulo, practicará cómo:**
 
@@ -16,5 +16,14 @@
 - Configure las operaciones de administración de usuarios.
 - Administrar directivas de contraseñas.
 - Configure las opciones de seguridad.
+
+
+### Requisitos previos
+
+**Conocimientos y experiencia trabajando con:**
+
+- Windows Server.
+- Principales tecnologías de red.
+
 
 

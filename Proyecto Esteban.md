@@ -44,4 +44,4 @@ Imagine que es administrador del sistema de una empresa de tamaño medio que est
 - Administre directivas de contraseña.
 - Configure opciones de seguridad.
 
-
+# Preparación

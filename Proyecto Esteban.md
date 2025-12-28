@@ -45,3 +45,11 @@ Imagine que es administrador del sistema de una empresa de tamaño medio que est
 - Configure opciones de seguridad.
 
 # Preparación
+
+Se trata de un proyecto guiado, donde se completa una serie de tareas. Es esencial completar las unidades en orden. 
+Cada unidad requiere recursos y configuración de unidades anteriores para funcionar correctamente.
+
+## Información general del proyecto
+En este proyecto guiado, se describen los pasos principales para crear, configurar y mantener un controlador de dominio. 
+También tiene la oportunidad de promover un controlador de dominio.
+

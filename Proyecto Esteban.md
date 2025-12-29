@@ -69,9 +69,10 @@ La sección Setup consta de tres tareas principales:
 
 **link a la iso:** (https://www.microsoft.com/es-es/evalcenter/download-windows-server-2019)
 
-Para empezar la instalación la hare en virtual box, me he instalado la iso de la página oficial de microsoft.
+Para empezar la instalación la hare en virtual box, me he instalado la iso de la página oficial de microsoft, en vez de instalarmelo,
+en mi máquina real.
 
-<img width="371" height="99" alt="image" src="https://github.com/user-attachments/assets/ea196b04-a0f4-49f4-8cbc-f8e327008a08" />
+
 
 
 

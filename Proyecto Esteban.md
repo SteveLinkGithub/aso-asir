@@ -67,4 +67,11 @@ La sección Setup consta de tres tareas principales:
 - Crear servidor miembro de dominio de Windows Server
 - Inicie el ejercicio y siga las instrucciones. Cuando haya terminado, asegúrese de volver a esta página para continuar con el aprendizaje.
 
+**link a la iso:** (https://www.microsoft.com/es-es/evalcenter/download-windows-server-2019)
+
+Para empezar la instalación la hare en virtual box, me he instalado la iso de la página oficial de microsoft.
+
+<img width="371" height="99" alt="image" src="https://github.com/user-attachments/assets/ea196b04-a0f4-49f4-8cbc-f8e327008a08" />
+
+
 

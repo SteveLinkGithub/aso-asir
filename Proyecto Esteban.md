@@ -71,7 +71,8 @@ La sección Setup consta de tres tareas principales:
 
 Para empezar la instalación la hare en virtual box, me he instalado la iso de la página oficial de microsoft, en vez de instalarmelo,
 en mi máquina real, y configuraremos paso a paso, la máquina de windows server 2022 y pondremos de nombre **(TAILWIND-DC1)**, y seleccionaremos la experiencia de escritorio,
-después le daremos a instalación personalizada y seguiremos los pasos para instalarlo.
+después le daremos a instalación personalizada y seguiremos los pasos para instalarlo, le pondremos contraseña al administrador que en nuestro caso sería la **(Pa55w.rdPa55w.rd)**.
+También miraremos la configuración de red y seguiremos los pasos de la preparación de windows server.
 
 <img width="322" height="245" alt="image" src="https://github.com/user-attachments/assets/49a9d40a-c640-4966-af99-dd4e42c282fb" />
 

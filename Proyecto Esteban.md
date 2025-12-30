@@ -82,8 +82,10 @@ También miraremos la configuración de red y seguiremos los pasos de la prepara
 
 <img width="620" height="449" alt="image" src="https://github.com/user-attachments/assets/952fa4ca-dded-4970-a672-1b1367fc25b0" />
 
+
+Como vemos en la configuración de red no me deja usar la propuesta asíq ue por eso lo he dejado en dhcp.
 <img width="203" height="233" alt="image" src="https://github.com/user-attachments/assets/b2cf559b-307d-4dc5-94b4-966f9847b288" />
 
-
+ A continuación agregaremos el rol de roles y características 
 
 

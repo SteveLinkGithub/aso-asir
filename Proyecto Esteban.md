@@ -80,6 +80,7 @@ También miraremos la configuración de red y seguiremos los pasos de la prepara
 
 <img width="332" height="249" alt="image" src="https://github.com/user-attachments/assets/babb8155-6169-44e0-9ce1-382fff2ff165" />
 
+<img width="620" height="449" alt="image" src="https://github.com/user-attachments/assets/952fa4ca-dded-4970-a672-1b1367fc25b0" />
 
 
 

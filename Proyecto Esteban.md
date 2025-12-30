@@ -90,6 +90,12 @@ A continuación cambiaremos el nombre del equipo.
 <img width="341" height="160" alt="image" src="https://github.com/user-attachments/assets/baa88302-8c3c-4039-8b08-dd8ba611cba3" />
 <img width="179" height="17" alt="image" src="https://github.com/user-attachments/assets/882bdda0-60b0-4c3b-a449-2278a5a96760" />
 
- A continuación agregaremos el rol de roles y características, 
+ A continuación agregaremos el rol de servicio de dominio de active directory en roles y características, una vez agregado el servicio
+ lo que haremos será a darle a instalar y renicio automático.
+<img width="410" height="288" alt="image" src="https://github.com/user-attachments/assets/c6d7cf92-ef1f-4937-ae00-23834af4259e" />
+<img width="395" height="299" alt="image" src="https://github.com/user-attachments/assets/5664a92b-94c6-4bae-b1a2-551f144dc642" />
+<img width="397" height="281" alt="image" src="https://github.com/user-attachments/assets/82b1cafd-e7c7-43fe-a9a3-c5fd8ba8f007" />
+<img width="400" height="287" alt="image" src="https://github.com/user-attachments/assets/7282196d-30f0-43ad-a7d8-25e41c80dfda" />
+
 
 

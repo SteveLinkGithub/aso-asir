@@ -70,9 +70,16 @@ La sección Setup consta de tres tareas principales:
 **link a la iso:** (https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022)
 
 Para empezar la instalación la hare en virtual box, me he instalado la iso de la página oficial de microsoft, en vez de instalarmelo,
-en mi máquina real, y configuraremos paso a paso, la máquina de windows server 2022 y pondremos de nombre **(TAILWIND-DC1)**.
+en mi máquina real, y configuraremos paso a paso, la máquina de windows server 2022 y pondremos de nombre **(TAILWIND-DC1)**, y seleccionaremos la experiencia de escritorio,
+después le daremos a instalación personalizada y seguiremos los pasos para instalarlo.
 
 <img width="322" height="245" alt="image" src="https://github.com/user-attachments/assets/49a9d40a-c640-4966-af99-dd4e42c282fb" />
+
+<img width="516" height="392" alt="image" src="https://github.com/user-attachments/assets/e61e3082-b4a1-46ca-9542-2e39839065f9" />
+
+<img width="332" height="249" alt="image" src="https://github.com/user-attachments/assets/babb8155-6169-44e0-9ce1-382fff2ff165" />
+
+
 
 
 

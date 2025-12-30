@@ -97,5 +97,6 @@ A continuación cambiaremos el nombre del equipo.
 <img width="397" height="281" alt="image" src="https://github.com/user-attachments/assets/82b1cafd-e7c7-43fe-a9a3-c5fd8ba8f007" />
 <img width="400" height="287" alt="image" src="https://github.com/user-attachments/assets/7282196d-30f0-43ad-a7d8-25e41c80dfda" />
 
+<img width="833" height="388" alt="image" src="https://github.com/user-attachments/assets/914d3579-461d-48eb-85e2-81b3b7a457f3" />
 
 

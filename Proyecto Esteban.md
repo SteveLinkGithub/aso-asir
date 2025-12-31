@@ -98,5 +98,6 @@ A continuación cambiaremos el nombre del equipo.
 <img width="400" height="287" alt="image" src="https://github.com/user-attachments/assets/7282196d-30f0-43ad-a7d8-25e41c80dfda" />
 
 <img width="833" height="388" alt="image" src="https://github.com/user-attachments/assets/914d3579-461d-48eb-85e2-81b3b7a457f3" />
-
+Ahora promocionaremos el servidor a controlador de dominio
+<img width="387" height="286" alt="image" src="https://github.com/user-attachments/assets/13a9162b-a6a1-4f64-8685-563c9b70bfbc" />
 

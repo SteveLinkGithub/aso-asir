@@ -104,6 +104,26 @@ a siguiente en el resto de opciones ya que no las tocaremos, hasta a llegar a la
 
 <img width="387" height="286" alt="image" src="https://github.com/user-attachments/assets/13a9162b-a6a1-4f64-8685-563c9b70bfbc" />
 
+
 <img width="386" height="286" alt="image" src="https://github.com/user-attachments/assets/3ec3db40-086b-4a2e-9307-025d7e90116e" />
+
+
+<img width="384" height="282" alt="image" src="https://github.com/user-attachments/assets/84ade991-07b8-4264-87e3-3a83c9b70054" />
+
+
+<img width="383" height="281" alt="image" src="https://github.com/user-attachments/assets/a454c841-d4e1-4401-8767-f46474cea58b" />
+
+
+<img width="383" height="281" alt="image" src="https://github.com/user-attachments/assets/bd4f19d8-5133-4c03-946e-9d330ac7d6d6" />
+
+
+<img width="386" height="282" alt="image" src="https://github.com/user-attachments/assets/0dde5552-9e0c-40ad-90c8-fa6cfdcf0d3e" />
+
+
+Una vez instalado, nos meteremos en el dominio como **tailwindtraders\administrator** con la contraseña de administrador predeterminada **(Pa55w.rdPa55w.rd)**
+
+
+<img width="385" height="279" alt="image" src="https://github.com/user-attachments/assets/20d47419-e1a1-4800-bdd2-9c251c170c3e" />
+
 
 

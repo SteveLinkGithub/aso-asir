@@ -145,4 +145,8 @@ Esta tarea también utiliza el archivo ISO de la edición de evaluación.
 A continuación crearemos el servidor miembro del dominio, siguiendo los pasos de la tarea.
 
 
+<img width="344" height="110" alt="image" src="https://github.com/user-attachments/assets/2a158a7a-ddc0-4e6f-8d68-f2097b395bf9" />
+
+
+
 

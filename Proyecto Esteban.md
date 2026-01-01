@@ -144,6 +144,12 @@ Esta tarea también utiliza el archivo ISO de la edición de evaluación.
 
 A continuación crearemos el servidor miembro del dominio, siguiendo los pasos de la tarea.
 
+También configuraremos la red del **(TAILWIND-MBR1)**.
+
+
+<img width="395" height="299" alt="image" src="https://github.com/user-attachments/assets/c3f6522a-d8fb-4b07-8dfe-8a2b345f8644" />
+
+
 
 <img width="180" height="15" alt="image" src="https://github.com/user-attachments/assets/aa2bc91f-2622-4e07-aabc-9200c4a80c8a" />
 

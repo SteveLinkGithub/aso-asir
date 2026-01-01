@@ -134,4 +134,8 @@ Una vez instalado, nos meteremos en el dominio como **tailwindtraders\administra
 <img width="385" height="279" alt="image" src="https://github.com/user-attachments/assets/20d47419-e1a1-4800-bdd2-9c251c170c3e" />
 
 
+<img width="519" height="332" alt="image" src="https://github.com/user-attachments/assets/0db28587-da2e-4bef-ab56-299927eaa51c" />
+
+
+
 

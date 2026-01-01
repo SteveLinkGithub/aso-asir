@@ -152,4 +152,8 @@ A continuación crearemos el servidor miembro del dominio, siguiendo los pasos d
 
 
 
+<img width="633" height="472" alt="image" src="https://github.com/user-attachments/assets/990bedf2-d1df-4d5a-b36b-74baf12cf310" />
+
+
+
 

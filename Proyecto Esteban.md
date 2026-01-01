@@ -137,5 +137,12 @@ Una vez instalado, nos meteremos en el dominio como **tailwindtraders\administra
 <img width="519" height="332" alt="image" src="https://github.com/user-attachments/assets/0db28587-da2e-4bef-ab56-299927eaa51c" />
 
 
+# Crear un servidor miembro del dominio de Windows Server
+
+En esta tarea, se implementa y configura un servidor miembro del dominio de Windows Server 2022 para el laboratorio donde se realizan tareas relacionadas con la credencial de habilidad aplicada.
+Esta tarea también utiliza el archivo ISO de la edición de evaluación.
+
+A continuación crearemos el servidor miembro del dominio, siguiendo los pasos de la tarea.
+
 
 

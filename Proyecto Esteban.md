@@ -142,7 +142,7 @@ Una vez instalado, nos meteremos en el dominio como **tailwindtraders\administra
 En esta tarea, se implementa y configura un servidor miembro del dominio de Windows Server 2022 para el laboratorio donde se realizan tareas relacionadas con la credencial de habilidad aplicada.
 Esta tarea también utiliza el archivo ISO de la edición de evaluación.
 
-A continuación crearemos el servidor miembro del dominio, siguiendo los pasos de la tarea.
+A continuación crearemos el servidor miembro del dominio, siguiendo los pasos de la tarea, y cambiaremos el nombre del equipo.
 
 También configuraremos la red del **(TAILWIND-MBR1)**.
 
@@ -151,11 +151,14 @@ También configuraremos la red del **(TAILWIND-MBR1)**.
 
 
 
+
 <img width="180" height="15" alt="image" src="https://github.com/user-attachments/assets/aa2bc91f-2622-4e07-aabc-9200c4a80c8a" />
 
 
 
+
 <img width="344" height="110" alt="image" src="https://github.com/user-attachments/assets/2a158a7a-ddc0-4e6f-8d68-f2097b395bf9" />
+
 
 
 

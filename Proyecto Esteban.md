@@ -151,9 +151,7 @@ También configuraremos la red del **(TAILWIND-MBR1)**.
 
 
 
-
 <img width="180" height="15" alt="image" src="https://github.com/user-attachments/assets/aa2bc91f-2622-4e07-aabc-9200c4a80c8a" />
-
 
 
 
@@ -161,8 +159,8 @@ También configuraremos la red del **(TAILWIND-MBR1)**.
 
 
 
-
 <img width="633" height="472" alt="image" src="https://github.com/user-attachments/assets/990bedf2-d1df-4d5a-b36b-74baf12cf310" />
+
 
 
 

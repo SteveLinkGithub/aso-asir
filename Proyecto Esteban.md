@@ -165,6 +165,10 @@ También configuraremos la red del **(TAILWIND-MBR1)**.
 <img width="633" height="472" alt="image" src="https://github.com/user-attachments/assets/990bedf2-d1df-4d5a-b36b-74baf12cf310" />
 
 
+Como vemos en la siguiente imagen, pondremos el nombre del usuario: **Administrador** y la contraseña sería la **
+
+
+<img width="649" height="371" alt="image" src="https://github.com/user-attachments/assets/4ad2a781-36bc-4ff9-b079-b9b424e4ac4a" />
 
 
 

@@ -74,6 +74,9 @@ en mi máquina real, y configuraremos paso a paso, la máquina de windows server
 después le daremos a instalación personalizada y seguiremos los pasos para instalarlo, le pondremos contraseña al administrador que en nuestro caso sería la **(Pa55w.rdPa55w.rd)**.
 También miraremos la configuración de red y seguiremos los pasos de la preparación de windows server.
 
+<img width="201" height="228" alt="image" src="https://github.com/user-attachments/assets/2eb1416f-c604-422b-a342-8c61cd49d4a3" />
+
+
 <img width="322" height="245" alt="image" src="https://github.com/user-attachments/assets/49a9d40a-c640-4966-af99-dd4e42c282fb" />
 
 <img width="516" height="392" alt="image" src="https://github.com/user-attachments/assets/e61e3082-b4a1-46ca-9542-2e39839065f9" />

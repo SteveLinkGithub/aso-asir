@@ -7,7 +7,7 @@ whoami <br>
 
 - echo "🎓 Student of CS & Business at IES Font de Sant Lluis"
 - echo "📊 Interests: Networks · AI · Programming · Linux · Windows"
-- echo "🎯 Hobbies: Reading · Playing football · Playing Videogames "
+- echo "🎯 Hobbies: Reading · Playing Football · Playing Videogames · Listening Music "
 
 **locale -a**
 - #en_US.utf8             # English — Professional working proficiency

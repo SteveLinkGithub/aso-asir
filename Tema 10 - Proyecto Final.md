@@ -72,11 +72,25 @@ Crear un directorio de trabajo:
 cd proyecto_glpi)**
 
 
+
+<img width="556" height="94" alt="image" src="https://github.com/user-attachments/assets/55bd9324-a748-46fd-b554-fc59a79ac4c3" />
+
+
+
 ## 7. Archivo docker-compose.yml
 
 El despliegue se realizará mediante Docker Compose.
 
 Ejemplo de archivo docker-compose.yml:
+
+
+<img width="431" height="64" alt="image" src="https://github.com/user-attachments/assets/a6ac56ec-3662-427e-8204-21db7e4d4137" />
+
+
+
+
+<img width="1133" height="746" alt="image" src="https://github.com/user-attachments/assets/938fff7f-45f6-44be-83bb-0ef95c37e459" />
+
 
 
 ## 8. Despliegue de la aplicación

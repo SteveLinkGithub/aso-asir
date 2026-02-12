@@ -99,9 +99,20 @@ Para iniciar el proyecto:
 
 **(docker compose up -d)**
 
+
+
+<img width="738" height="503" alt="image" src="https://github.com/user-attachments/assets/23a75bb8-e268-4a9b-a630-e0ce28291b93" />
+
+
+
 Comprobar que los contenedores están en ejecución:
 
 **(docker compose ps)**
+
+
+
+<img width="889" height="128" alt="image" src="https://github.com/user-attachments/assets/5d70d0a3-9a5a-40ab-a31f-cbf00928e951" />
+
 
 ## 9. Acceso a GLPI
 
@@ -109,11 +120,18 @@ Abrir el navegador y acceder a:
 
 http://localhost:8080
 
+
+<img width="1453" height="790" alt="image" src="https://github.com/user-attachments/assets/1153cdf1-83ab-41d1-9f0b-8793fbe60680" />
+
+
+
 Desde ahí:
 
 - Seguir el asistente de instalación de GLPI
 - Configurar la conexión con la base de datos
 - Finalizar la instalación
+
+
 
 ## 10. Persistencia de datos
 

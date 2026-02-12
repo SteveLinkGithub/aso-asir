@@ -200,3 +200,6 @@ Este proyecto final permite:
 - Desarrollar competencias prácticas de ASIR
 
 Con este proyecto se cierra el curso de forma coherente y aplicada.
+
+
+**¡ESCRIBE db glpi glpi → CONTINUAR → YA ESTÁ!**

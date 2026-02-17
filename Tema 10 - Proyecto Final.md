@@ -186,14 +186,14 @@ Aquí tenemos la arquitectura docker-compose.yml
    
 **4. Explicación del uso de volúmenes**
 
-Hice docker compose down,es decir, que borra todo lo que haya en el contenedor, luego hiuce docker-compose up -d y el login glpi/glpi seguía funcionando, debiod a ello los volúmenes db_data (base datos) y glpi_data (archivos) guardan todo fuera de los contenedores, por eso no se pierde nada.
+Hice docker compose down, es decir, que borra todo lo que haya en el contenedor, luego hiuce docker-compose up -d y el login glpi/glpi seguía funcionando, debiod a ello los volúmenes db_data (base datos) y glpi_data (archivos) guardan todo fuera de los contenedores, por eso no se pierde nada.
 
 Es por ello que los volúmenes son recomendables crearlos para evitar perder la información.
 
 
 **5. Conclusiones personales**
 
-
+Según mi opinión esta práctica me ha servido para seguir ampliando conocimientos sobre docker, y de como gestionar los contenedores y crear los volúmenes de forma correcta, para así evitar la pérdida de información.
 
 
 

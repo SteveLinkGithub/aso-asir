@@ -237,11 +237,8 @@ Para hacer la copia de seguridad
 
 **Para cambiar de puertos:**
 
-(ports:
-  - "9090:80")
-
-
-
+**(ports:
+  -"9090:80")**
 
 
 - Personalización de GLPI
@@ -250,7 +247,6 @@ Para personalizar el glpi:
 
 (**FROM diouxx/glpi
 COPY logo.png /var/www/html/glpi/files/_logos/)**
-
 
 
 

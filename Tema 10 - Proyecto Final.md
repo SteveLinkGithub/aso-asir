@@ -215,11 +215,52 @@ Según mi opinión esta práctica me ha servido para seguir ampliando conocimien
 Para alumnado avanzado:
 
 - Uso de HTTPS
+
+(**nginx:
+  image: nginx:alpine
+  ports:
+    - "443:443"
+  volumes:
+    - ./nginx.conf:/etc/nginx/nginx.conf**)
+
+
 - Copias de seguridad de la base de datos
+
+Para hacer la copia de seguridad 
+
+**(docker exec glpi_db mysqldump -u glpi -pglpi glpi > backup.sql)**
+
+
+
+
 - Cambio de puertos
+
+**Para cambiar de puertos:**
+
+(ports:
+  - "9090:80")
+
+
+
+
+
 - Personalización de GLPI
+
+Para personalizar el glpi:
+
+(**FROM diouxx/glpi
+COPY logo.png /var/www/html/glpi/files/_logos/)**
+
+
+
+
 - Control de usuarios
 
+Para el control de usuarios:
+
+(**Admin: admin/Admin
+Técnico: tecnico/Tecnico
+Usuario: user/user**)
 
 
 ## 15. Resumen
@@ -232,6 +273,3 @@ Este proyecto final permite:
 - Desarrollar competencias prácticas de ASIR
 
 Con este proyecto se cierra el curso de forma coherente y aplicada.
-
-
-**¡ESCRIBE db glpi glpi → CONTINUAR → YA ESTÁ!**

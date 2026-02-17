@@ -160,13 +160,42 @@ Durante el proyecto se deben aplicar buenas prácticas:
 
 El alumno debe entregar un PDF que incluya:
 
-1. Explicación de la arquitectura
-2. Archivo docker-compose.yml
-3. Capturas de:
+**1. Explicación de la arquitectura**
+
+La arquitectura del proyecto se basa en el modelo cliente-servidor donde el navegador web accede a través de localhost:8080 al contenedor glpi_app, siendo una de (imagen diouxx/glpi con PHP+Apache), que a su vez se comunica internamente por la red Docker glpi_net con el contenedor glpi_db (MariaDB 10.6). Este último no expone los puertos al host por seguridad, y ambos servicios utilizan volúmenes persistentes: db_data para los datos MySQL en /var/lib/mysql y glpi_data para los archivos de la aplicación en /var/www/html/glpi, garantizando que la información no se borre de los contenedores.
+
+**2. Archivo docker-compose.yml**
+
+Aquí tenemos la arquitectura docker-compose.yml
+
+
+<img width="589" height="373" alt="image" src="https://github.com/user-attachments/assets/20c71c4b-c84a-4ea2-9e3b-9a345031da48" />
+
+
+**3. Capturas de:
     - Contenedores en ejecución
-    - Acceso a GLPI
-4. Explicación del uso de volúmenes
-5. Conclusiones personales
+    - Acceso a GLPI**
+    
+
+<img width="465" height="49" alt="image" src="https://github.com/user-attachments/assets/54639467-4bb3-41c8-8c90-a9d47838046f" />
+
+
+
+<img width="916" height="447" alt="image" src="https://github.com/user-attachments/assets/17aa9de1-d02c-40fe-a7d1-f199cc7c88e5" />
+
+   
+**4. Explicación del uso de volúmenes**
+
+Hice docker compose down,es decir, que borra todo lo que haya en el contenedor, luego hiuce docker-compose up -d y el login glpi/glpi seguía funcionando, debiod a ello los volúmenes db_data (base datos) y glpi_data (archivos) guardan todo fuera de los contenedores, por eso no se pierde nada.
+
+Es por ello que los volúmenes son recomendables crearlos para evitar perder la información.
+
+
+**5. Conclusiones personales**
+
+
+
+
 
 ## 13. Criterios de evaluación
 

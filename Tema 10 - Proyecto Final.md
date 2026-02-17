@@ -133,6 +133,9 @@ Desde ahí:
 
 
 
+<img width="961" height="456" alt="image" src="https://github.com/user-attachments/assets/14447e8f-8a5d-409c-828a-c07b76750176" />
+
+
 ## 10. Persistencia de datos
 
 Gracias a los volúmenes:

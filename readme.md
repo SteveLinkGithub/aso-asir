@@ -5,15 +5,16 @@
 - **GLPI:** `steven32/glpi-asir:latest` → [https://hub.docker.com/r/steven32/glpi-asir](https://hub.docker.com/r/steven32/glpi-asir)
 
 ## GitLab
-[https://gitlab.com/stevelinkgithub-group/SteveLinkGithub-project](https://gitlab.com/stevelinkgithub-group/SteveLinkGithub-project)
+[https://gitlab.com/SteveLinkGithub/proyecto_glpi](https://gitlab.com/SteveLinkGithub/proyecto_glpi)
 
 ## Despliegue
 Para desplegar la aplicación utilizando mis imágenes personalizadas de Docker Hub, ejecuta los siguientes comandos:
 
 ```bash
-git clone [https://gitlab.com/stevelinkgithub-group/SteveLinkGithub-project](https://gitlab.com/stevelinkgithub-group/SteveLinkGithub-project)
+git clone [https://gitlab.com/SteveLinkGithub/proyecto_glpi](https://gitlab.com/SteveLinkGithub/proyecto_glpi)
 cd proyecto_glpi
 docker compose up -d
+
 
 
 

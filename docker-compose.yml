@@ -1,10 +1,8 @@
-GNU nano 6.2                                               docker-compose.yml                                                                                           
-
 version: "3.8"
 
 services:
   db:
-    image: mariadb:10.6
+    image: steven32/mariadb-asir:10.6
     container_name: glpi_db
     environment:
       MYSQL_ROOT_PASSWORD: root
@@ -22,7 +20,7 @@ services:
     restart: unless-stopped
 
   glpi:
-    image: diouxx/glpi:latest
+    image: steven32/glpi-asir:latest
     container_name: glpi_app
     ports:
       - "8080:80"

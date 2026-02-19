@@ -7,6 +7,8 @@
 ## GitLab
 [https://gitlab.com/steven32/proyecto_glpi](https://gitlab.com/steven32/proyecto_glpi)
 
+(https://gitlab.com/stevelinkgithub-group/stevelinkgithub-project)
+
 ## Despliegue
 Para desplegar la aplicación utilizando mis imágenes personalizadas de Docker Hub, ejecuta los siguientes comandos:
 

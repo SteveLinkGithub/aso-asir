@@ -1,16 +1,17 @@
-  GNU nano 6.2                                                                                      readme.md                                                                                               
-
 # GLPI Docker - Proyecto Final ASIR
 
-## Docker Hub
-- **DB:** mariadb:10.6 → https://hub.docker.com/_/mariadb
-- **GLPI:** diouxx/glpi → https://hub.docker.com/r/diouxx/glpi
+## Docker Hub (Mis Imágenes)
+- **DB:** `steven32/mariadb-asir:10.6` → [https://hub.docker.com/r/steven32/mariadb-asir](https://hub.docker.com/r/steven32/mariadb-asir)
+- **GLPI:** `steven32/glpi-asir:latest` → [https://hub.docker.com/r/steven32/glpi-asir](https://hub.docker.com/r/steven32/glpi-asir)
 
 ## GitLab
-https://gitlab.com/glpi/proyecto_glpi
+[https://gitlab.com/steven32/proyecto_glpi](https://gitlab.com/steven32/proyecto_glpi)
 
 ## Despliegue
+Para desplegar la aplicación utilizando mis imágenes personalizadas de Docker Hub, ejecuta los siguientes comandos:
+
 ```bash
-git clone https://gitlab.com/glpi/proyecto_glpi.git
+git clone [https://gitlab.com/steven32/proyecto_glpi.git](https://gitlab.com/steven32/proyecto_glpi.git)
 cd proyecto_glpi
 docker compose up -d
+

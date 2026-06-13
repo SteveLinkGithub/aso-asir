@@ -640,4 +640,4 @@ sudo tail -20 /var/log/auth.log
 
 En un entorno real con Windows Server, estos comandos devolverían el usuario resuelto desde el controlador de dominio AD y la sesión se abriría correctamente con los grupos del dominio asignados.
 
-Como el servidor lo teníamos en clase hemos utilizado el servidor para hacer la práctica en el aula, hemos realizado esta práctica para .
+**Como el servidor lo teníamos en clase hemos utilizado el servidor para hacer la práctica propuesta del proyecto en el aula, hemos realizado esta práctica para montar un sistema donde los usuarios, sus contraseñas y sus permisos se gestionen de forma centralizada y  más segura, ofreciendo seguridad, que es exactamente lo que usa cualquier empresa con varios ordenadores de los propios empleados para protegerlos ante accesos no indebidos.**

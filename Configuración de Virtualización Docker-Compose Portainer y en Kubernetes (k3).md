@@ -2,7 +2,7 @@
 
 **Paso 1 – Verificación de Docker instalado**
 
-Se comprueba que Docker Engine está instalado en su versión v28.1.1, que el servicio se encuentra activo y que el usuario dispone de los permisos necesarios para trabajar con él.
+A continuación hemos realizado la comprobación de que Docker-Engine está instalado en su versión v28.1.1, y de que el servicio se encuentra activo y que el usuario dispone de los permisos necesarios para trabajar con él.
 
 ![captura 1](https://github.com/user-attachments/assets/1921f196-b6ad-40cb-b2be-ce57bfbe3296)
 
@@ -14,7 +14,7 @@ Se instala el plugin oficial docker-compose-plugin a través de apt, actualizand
 
 **Paso 3 – Creación de la estructura del proyecto**
 
-Se crea el directorio de trabajo /mindverse/proyecto con permisos de superusuario y se accede a él. Dentro se define el fichero docker-compose.yml mediante nano, donde se declaran los dos servicios principales: web (nginx) y db (mariadb).
+Se crea el directorio de trabajo /mindverse/proyecto con los permisos de superusuario y se accede a él. Dentro se define el fichero docker-compose.yml mediante el editor de textos nano, donde se declaran los dos servicios principales: web (**nginx**) y db (mariadb).
 
 ![captura 3](https://github.com/user-attachments/assets/c5e55c53-4e1f-44ed-897f-b7a40b5b0181)
 
@@ -95,3 +95,5 @@ Se redacta el fichero deployment.yaml definiendo un Deployment con 2 réplicas d
 Se accede a http://localhost:30080 y se confirma que nginx responde correctamente desde dentro del cluster k3s. La página de bienvenida 'Welcome to nginx!' indica que el despliegue es completo y funcional.
 
 ![captura 16](https://github.com/user-attachments/assets/d7def332-89e7-4481-bbba-d63c0c86c593)
+
+**Esta practica también las hemos en el servidor, ya que allí teníamos puesto todo el proyecto, ya que se nos hizo imposible realizarlo fuera del centro en estas dos prácticas.**

@@ -153,7 +153,7 @@ sudo faillock --user alumno1 --reset
 
 ### 6. Restricción de acceso por grupos (pam_access)
 
-Se configura `pam_access` para controlar qué usuarios pueden iniciar sesión, permitiendo el grupo `it` y `alumno1`, y denegando a `alumno3`.
+Se configura el `pam_access` para controlar qué usuarios pueden iniciar sesión, permitiendo el grupo `it` y `alumno1`, y denegando a `alumno3`.
 
 **Copia de seguridad y edición:**
 
@@ -505,7 +505,7 @@ Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 
 ### 17. Configuración del dominio AD
 
-Una vez instalado el rol AD DS se promueve el servidor a controlador de dominio.
+Una vez hayamos instalado el rol de AD DS se promueve el servidor a controlador de dominio.
 
 **Desde PowerShell:**
 
@@ -640,4 +640,4 @@ sudo tail -20 /var/log/auth.log
 
 En un entorno real con Windows Server, estos comandos devolverían el usuario resuelto desde el controlador de dominio AD y la sesión se abriría correctamente con los grupos del dominio asignados.
 
-Como el servidor lo teníamos en clase hemos utilizado el servidor para hacer la práctica en el aula.
+Como el servidor lo teníamos en clase hemos utilizado el servidor para hacer la práctica en el aula, hemos realizado esta práctica para .

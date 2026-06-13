@@ -92,7 +92,8 @@ Se redacta el fichero deployment.yaml definiendo un Deployment con 2 réplicas d
 
 **Paso 16 – Verificación final: nginx en Kubernetes (puerto 30080)**
 
-Se accede a http://localhost:30080 y se confirma que nginx responde correctamente desde dentro del cluster k3s. La página de bienvenida 'Welcome to nginx!' indica que el despliegue es completo y funcional.
+Se accede a http://localhost:30080 y se confirma que nginx responde correctamente desde dentro del cluster k3s. La página de bienvenida 'Welcome to nginx!' indica que el despliegue es completo y funcional, y que se ha
+realizado todo el procedimiento correctamente.
 
 ![captura 16](https://github.com/user-attachments/assets/d7def332-89e7-4481-bbba-d63c0c86c593)
 
